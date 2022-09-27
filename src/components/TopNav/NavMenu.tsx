@@ -6,29 +6,42 @@ import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
 
 interface props {
   expand: string;
+  showMenu: boolean;
+  toggleMenu: () => void;
 }
 
-function NavMenu({ expand }: props) {
+function NavMenu({ expand, showMenu, toggleMenu }: props) {
   return (
     <Navbar.Offcanvas
       className="bg-dark"
       id={`offcanvasNavbar-expand-${expand}`}
       aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
       placement="end"
+      show={showMenu}
+      onEscapeKeyDown={toggleMenu}
     >
-      <Offcanvas.Header className="bg-secondary" closeButton>
+      <Offcanvas.Header
+        className="bg-secondary"
+        closeButton
+        onHide={toggleMenu}
+      >
         <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-          <h1 className={"text-white m-0"}>Menu</h1>
+          <h1 className={"text-white m-0"}>DPGraham</h1>
         </Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
         <Nav className="justify-content-end flex-grow-1 pe-3">
-          <Link to="/" className="text-decoration-none m-3 dpg-dark-link h3">
+          <Link
+            to="/"
+            className="text-decoration-none m-3 dpg-dark-link h3"
+            onClick={toggleMenu}
+          >
             Home
           </Link>
           <Link
             to="/blog"
             className="text-decoration-none m-3 dpg-dark-link h3"
+            onClick={toggleMenu}
           >
             Blog
           </Link>

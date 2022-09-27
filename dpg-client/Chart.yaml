@@ -11,6 +11,6 @@ type: application
 # they can but do not need to be the same
 
 # This is the charts version.
-version: 0.0.12
+version: 0.0.14
 # The appVersion will act as default image tag if not specified in Values.yaml
-appVersion: "v0.0.12"
+appVersion: "v0.0.14"
