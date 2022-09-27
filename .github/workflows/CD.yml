@@ -1,21 +1,21 @@
- name: Test, Build, Push & Deploy
- # This will run when a tag is pushed
+name: Test, Build, Push & Deploy
+# This will run when a tag is pushed
 
- on:
-   push:
-     tags:
-       - 'v*'
+on:
+  push:
+    tags:
+      - 'v*'
 
- env:
-   IMAGE_NAME: dpg-client
+env:
+  IMAGE_NAME: dpg-client
 
- jobs:
-   build_and_test:
+jobs:
+  build_and_test:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [ 16.x ]
 
     steps:
       - uses: actions/checkout@v3
@@ -27,37 +27,52 @@
       - run: npm run build --if-present
       - run: npm test
 
-   build_docker_image:
-     needs: build_and_test
-     runs-on: ubuntu-latest
-     steps:
+  build_docker_image:
+    needs: build_and_test
+    runs-on: ubuntu-latest
+    steps:
 
-       - name: Checkout
-         uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-       - name: Docker meta
-         id: meta
-         uses: docker/metadata-action@v4
-         with:
-           images: dpgraham4401/${{env.IMAGE_NAME}}
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: dpgraham4401/${{env.IMAGE_NAME}}
 
-       - name: Set up QEMU
-         uses: docker/setup-qemu-action@v2
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
 
-       - name: Set up Docker Buildx
-         uses: docker/setup-buildx-action@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
-       - name: Login to DockerHub
-         uses: docker/login-action@v2
-         with:
-           username: ${{ secrets.DOCKER_HUB_USERNAME }}
-           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
-       - name: Build and push
-         uses: docker/build-push-action@v3
-         with:
-           context: .
-           platforms: linux/amd64,linux/arm64
-           push: true
-           tags: ${{ steps.meta.outputs.tags }}
-           labels: ${{ steps.meta.outputs.labels }}
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  deploy_docker_image:
+    needs: build_docker_image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get tag
+        id: tag
+        uses: dawidd6/action-get-tag@v1
+
+      - name: Deploy
+        uses: actions-hub/kubectl@master
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
+        with:
+          args: set image -n dpgraham deployments.apps/dpgclient-dpg-client dpgclient=dpgraham4401/dpg-client:${{steps.tag.outputs.tag}}

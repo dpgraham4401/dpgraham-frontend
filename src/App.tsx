@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./features/Home";
-import Article from "./features/Article";
-import BlogHome from "./features/BlogHome";
-import TopNav from "./components/TopNav";
-import Footer from "./components/Footer";
-import FallbackError from "./components/FallbackError";
-import DpgError from "./components/DpgError";
+import Home from "features/Home";
+import Article from "features/Article";
+import BlogHome from "features/BlogHome";
+import TopNav from "components/TopNav";
+import Footer from "components/Footer";
+import FallbackError from "components/FallbackError";
+import DpgError from "components/DpgError";
 
 function App() {
   return (

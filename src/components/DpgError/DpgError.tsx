@@ -1,5 +1,5 @@
 import React from "react";
-import DpgCard from "../DpgCard";
+import DpgCard from "components/DpgCard";
 import { Container } from "react-bootstrap";
 
 interface Props {
