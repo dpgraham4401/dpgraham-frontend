@@ -5,12 +5,13 @@ import Article from "./features/Article";
 import BlogHome from "./features/BlogHome";
 import TopNav from "./components/TopNav";
 import Footer from "./components/Footer";
+import FallbackError from "./components/FallbackError";
 import DpgError from "./components/DpgError";
 
 function App() {
   return (
     <>
-      <DpgError>
+      <FallbackError>
         <BrowserRouter>
           <main className="bg-dark flex-fill py-1">
             <TopNav />
@@ -18,11 +19,17 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/blog" element={<BlogHome />} />
               <Route path="/blog/:id" element={<Article />} />
+              <Route
+                path="*"
+                element={
+                  <DpgError statusCode={404} message={"page not found"} />
+                }
+              />
             </Routes>
           </main>
           <Footer />
         </BrowserRouter>
-      </DpgError>
+      </FallbackError>
     </>
   );
 }

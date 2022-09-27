@@ -1,38 +1,34 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
+import React from "react";
+import DpgCard from "../DpgCard";
+import { Container } from "react-bootstrap";
 
 interface Props {
-  children?: ReactNode;
+  statusCode?: number;
+  message?: string;
 }
 
-interface State {
-  hasError: boolean;
-}
-
-class DpgError extends Component<Props, State> {
-  public state: State = {
-    hasError: false,
-  };
-
-  public static getDerivedStateFromError(_: Error): State {
-    // Update state so the next render will show the fallback UI.
-    return { hasError: true };
-  }
-
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error("Uncaught error:", error, errorInfo);
-  }
-
-  public render() {
-    if (this.state.hasError) {
-      return (
-        <div className="bg-dark flex-fill">
-          <h1 className="text-light">Sorry.. we experienced an error</h1>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
+// Component for displaying errors in a pretty bootstrap card
+function DpgError(props: Props) {
+  return (
+    <Container>
+      <DpgCard>
+        <DpgCard.Header
+          title={
+            props.statusCode
+              ? `Error: ${props.statusCode}`
+              : "Sorry, we experienced and error"
+          }
+        />
+        <DpgCard.Body>
+          {props.message ? (
+            <p>{props.message}</p>
+          ) : (
+            <p>Sorry, we experienced an error</p>
+          )}
+        </DpgCard.Body>
+      </DpgCard>
+    </Container>
+  );
 }
 
 export default DpgError;
