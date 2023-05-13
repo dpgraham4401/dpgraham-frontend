@@ -23,16 +23,14 @@
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.3",
     "react-router-dom": "^6.4.0",
-    "react-scripts": "5.0.1",
     "sass": "^1.56.1",
     "typescript": "^4.8.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --watchAll=false --transformIgnorePatterns \"node_modules/(?!@amcharts)/\"",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "vite",
+    "test": "vitest"
   },
   "eslintConfig": {
     "extends": [
@@ -67,7 +65,13 @@
     ]
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
     "eslint": "8.26.0",
-    "prettier": "2.8.3"
+    "prettier": "2.8.3",
+    "save": "^2.9.0",
+    "vite": "^4.3.5",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vitest": "^0.31.0"
   }
 }
