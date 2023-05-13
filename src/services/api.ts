@@ -8,7 +8,7 @@ interface RequestOptions {
 }
 
 function request(method: string) {
-  const baseURL = `${process.env.REACT_APP_API_URL}`;
+  const baseURL = `${import.meta.env.VITE_API_URL}`;
   return (url: string, body: object | null) => {
     const requestOptions: RequestOptions = {
       url: `${baseURL}/${url}`,
