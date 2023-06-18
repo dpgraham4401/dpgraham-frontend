@@ -63,6 +63,9 @@ autolabeler:
     files:
       - 'docs/**/*'
       - '**/README.md'
+    body:
+      - '/documentation/gmi'
+      - '/docs/gmi'
   - label: 'CI/CD'
     files:
       - '.github/**/*'
