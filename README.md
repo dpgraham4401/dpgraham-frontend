@@ -1,46 +1,62 @@
-# Getting Started with Create React App
+# dpgraham-client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+Welcome to the `dpgraham-client` repository, this repository contains a React single-page application (SPA)
+that serves as my personal blog and experimental website. This application accompanies
+the [`dpgraham-server`](https://github.com/dpgraham4401/dpgraham-server) repo.
 
-In the project directory, you can run:
+## Purpose
 
-### `npm start`
+If you're reading this, you probably think I'm crazy. I understand that using a single-page application is not
+the most economical way to create a personal blog, I have intentionally chosen this approach as an opportunity to
+explore and learn about various aspects of web
+development. By developing this project, I aim to gain hands-on experience with React, TypeScript, and other front end
+related technologies.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To run the dpgraham-client application locally, follow the steps below:
 
-### `npm test`
+1. Clone this repository and cd to repo root:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```shell
+    git clone https://github.com/dpgraham4401/dpgraham-client.git && cd dpgraham-client
+    ```
 
-### `npm run build`
+2. Install the necessary dependencies using a package manager such as npm or yarn:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```shell
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Start the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```shell
+    npm start
+    ```
 
-### `npm run eject`
+## Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Contributions are welcome and greatly appreciated. If you wish to contribute to this project, please follow the
+guidelines below:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Fork the repository on GitHub.
+2. Create a new branch with a descriptive name for your feature or bug fix.
+3. Commit your changes and push them to your forked repository.
+4. Submit a pull request, explaining the changes you have made and their purpose.
+5. Don't be a jerk.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## License
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This project is licensed under the GPL-3.0 License - see the [LICENSE](/LICENSE) file for details.
 
-## Learn More
+## Contact
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If you have any questions, suggestions, or feedback regarding this project, please feel free to reach out to me. You can
+contact me through the following channels:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [LinkedIn](https://www.linkedin.com/in/dpgraham4401/)
+- Open an [issue on GitHub](https://github.com/dpgraham4401/dpgraham-client/issues)
+
+Thank you for your interest in the dpgraham-client project. Happy coding!

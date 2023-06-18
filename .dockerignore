@@ -4,7 +4,8 @@
 README.md
 .prettierignore
 .prettierrc.json
-.env.example
+config/*
 node_modules/
 dpg-client/
 .github/
+
