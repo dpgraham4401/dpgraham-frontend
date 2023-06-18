@@ -1,0 +1,43 @@
+name: Test, Build, Push & Deploy
+# This will run when a tag is pushed
+
+on:
+  push:
+    paths:
+      - '**/*.ts'
+      - '**/*.tsx'
+      - '.github/workflows/test.yaml'
+  pull_request:
+    paths:
+      - '**/*.ts'
+      - '**/*.tsx'
+      - '.github/workflows/test.yaml'
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 18 ]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Test Node.js-${{ matrix.node-version }}
+        run: npm test
+        env:
+          VITE_HT_ENV: 'TEST'
