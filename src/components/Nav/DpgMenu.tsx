@@ -7,7 +7,7 @@ interface TopNavProps {
   setShowMenu: Dispatch<SetStateAction<boolean>>;
 }
 
-function TopNav({ showMenu, setShowMenu }: TopNavProps) {
+export function DpgMenu({ showMenu, setShowMenu }: TopNavProps) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -28,39 +28,10 @@ function TopNav({ showMenu, setShowMenu }: TopNavProps) {
           </IconButton>
           <Box sx={{ flexGrow: 1 }} />
           <Button color="inherit" onClick={() => setShowMenu(!showMenu)}>
-            <MenuIcon />
+            <MenuIcon fontSize="large" />
           </Button>
         </Toolbar>
       </AppBar>
     </Box>
   );
-
-  // return (
-  //   <Container>
-  //     <Navbar key={expand} bg="dark" expand={expand} className="mb-3">
-  //       <Container fluid>
-  //         <Navbar.Brand
-  //           as={Link}
-  //           className="bg-primary bg-gradient rounded-circle"
-  //           to="/"
-  //         >
-  //           <img
-  //             src="/rp_bg_trans.png"
-  //             width={"120"}
-  //             height={"100"}
-  //             alt="DPGraham"
-  //           />
-  //         </Navbar.Brand>
-  //         <NavBtn expand={expand} toggleNav={toggleMenu} />
-  //         <NavMenu
-  //           expand={expand}
-  //           showMenu={showMenu}
-  //           toggleMenu={toggleMenu}
-  //         />
-  //       </Container>
-  //     </Navbar>
-  //   </Container>
-  // );
 }
-
-export default TopNav;
