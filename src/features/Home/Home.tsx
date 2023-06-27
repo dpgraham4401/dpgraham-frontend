@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
 import { api } from "../../services";
 import { Blog } from "types";
-import DpgCard from "../../components/DpgCard";
-import { Link } from "react-router-dom";
 
 interface Error {
   status?: number;

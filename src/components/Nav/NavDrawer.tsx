@@ -1,3 +1,4 @@
+import { routes } from "components/Nav/routes";
 import {
   Divider,
   Drawer,
@@ -8,6 +9,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import React, { Dispatch, SetStateAction } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface NavDrawerProps {
   showMenu: boolean;
@@ -15,6 +17,7 @@ interface NavDrawerProps {
 }
 
 export function NavDrawer({ showMenu, setShowMenu }: NavDrawerProps) {
+  const navigate = useNavigate();
   return (
     <Drawer
       variant="temporary"
@@ -24,13 +27,16 @@ export function NavDrawer({ showMenu, setShowMenu }: NavDrawerProps) {
     >
       <Divider />
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <p>hello</p>
-              </ListItemIcon>
-              <ListItemText primary={text} />
+        {routes.map((route, index) => (
+          <ListItem key={route.id} disablePadding>
+            <ListItemButton
+              onClick={() => {
+                navigate(route.url);
+                setShowMenu(false);
+              }}
+            >
+              <ListItemIcon>{route.icon}</ListItemIcon>
+              <ListItemText primary={route.text} />
             </ListItemButton>
           </ListItem>
         ))}
