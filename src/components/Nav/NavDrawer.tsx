@@ -24,6 +24,9 @@ export function NavDrawer({ showMenu, setShowMenu }: NavDrawerProps) {
       anchor="right"
       open={showMenu}
       onClose={() => setShowMenu(false)}
+      PaperProps={{
+        sx: { width: 240 },
+      }}
     >
       <Divider />
       <List>
