@@ -1,16 +1,15 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  IconButton,
-  Toolbar,
-  Typography,
-} from "@mui/material";
-import React from "react";
+import { AppBar, Box, Button, IconButton, Toolbar } from "@mui/material";
+import React, { Dispatch, SetStateAction } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
 
-function TopNav() {
+interface TopNavProps {
+  showMenu: boolean;
+  setShowMenu: Dispatch<SetStateAction<boolean>>;
+}
+
+function TopNav({ showMenu, setShowMenu }: TopNavProps) {
   return (
-    <Box sx={{ flexGrow: 1, bgcolor: "secondary.main" }}>
+    <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -27,10 +26,10 @@ function TopNav() {
               alt="DPGraham"
             />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
-          </Typography>
-          <Button color="inherit">Login</Button>
+          <Box sx={{ flexGrow: 1 }} />
+          <Button color="inherit" onClick={() => setShowMenu(!showMenu)}>
+            <MenuIcon />
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>

@@ -1,48 +1,23 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  createTheme,
-  IconButton,
-  ThemeProvider,
-  Toolbar,
-  Typography,
-} from "@mui/material";
-import React from "react";
+import { Box } from "@mui/material";
+import { NavDrawer } from "components/TopNav/NavDrawer";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "features/Home";
 import Article from "features/Article";
 import BlogHome from "features/BlogHome";
 import TopNav from "components/TopNav";
-import Footer from "components/Footer";
 import FallbackError from "components/FallbackError";
 import DpgError from "components/DpgError";
 
-// const darkTheme = createTheme({
-//   palette: {
-//     mode: "dark",
-//     primary: {
-//       light: "#000000",
-//       main: "#1fafa8",
-//       dark: "#ffffff",
-//       contrastText: "#fff",
-//     },
-//     secondary: {
-//       light: "#000000",
-//       main: "#af1f26",
-//       dark: "#ffffff",
-//       contrastText: "#000",
-//     },
-//   },
-// });
-
 function App() {
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <>
       <FallbackError>
         <BrowserRouter>
           <Box sx={{ flexGrow: 1 }}>
-            <TopNav />
+            <TopNav showMenu={showMenu} setShowMenu={setShowMenu} />
+            <NavDrawer setShowMenu={setShowMenu} showMenu={showMenu} />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/blog" element={<BlogHome />} />
@@ -55,7 +30,6 @@ function App() {
               />
             </Routes>
           </Box>
-          <Footer />
         </BrowserRouter>
       </FallbackError>
     </>
