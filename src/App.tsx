@@ -1,4 +1,4 @@
-import { Box, CssBaseline } from "@mui/material";
+import { Box, Container, CssBaseline } from "@mui/material";
 import { NavDrawer } from "components/Nav/NavDrawer";
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -14,13 +14,13 @@ function App() {
 
   return (
     <>
-      <CssBaseline />
       <FallbackError>
         <BrowserRouter>
-          <Box
-            height="100vh"
-            width="100vw"
-            sx={{ flexGrow: 1, backgroundColor: "#333333" }}
+          <CssBaseline />
+          <Container
+            maxWidth={false}
+            disableGutters
+            style={{ backgroundColor: "#333333", height: "100vh" }}
           >
             <DpgMenu showMenu={showMenu} setShowMenu={setShowMenu} />
             <NavDrawer setShowMenu={setShowMenu} showMenu={showMenu} />
@@ -35,7 +35,7 @@ function App() {
                 }
               />
             </Routes>
-          </Box>
+          </Container>
         </BrowserRouter>
       </FallbackError>
     </>

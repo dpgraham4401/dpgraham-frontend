@@ -1,4 +1,11 @@
-import { AppBar, Box, Button, IconButton, Toolbar } from "@mui/material";
+import {
+  AppBar,
+  Avatar,
+  Box,
+  Button,
+  IconButton,
+  Toolbar,
+} from "@mui/material";
 import React, { Dispatch, SetStateAction } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -13,7 +20,7 @@ export function DpgMenu({ showMenu, setShowMenu }: TopNavProps) {
       <AppBar position="static">
         <Toolbar>
           <IconButton
-            size="large"
+            size="small"
             edge="start"
             color="inherit"
             aria-label="menu"
@@ -21,8 +28,8 @@ export function DpgMenu({ showMenu, setShowMenu }: TopNavProps) {
           >
             <img
               src="/rp_bg_trans.png"
-              width={"120"}
-              height={"100"}
+              width={"60"}
+              height={"50"}
               alt="DPGraham"
             />
           </IconButton>
