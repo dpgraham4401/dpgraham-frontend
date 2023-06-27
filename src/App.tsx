@@ -18,33 +18,43 @@ import Footer from "components/Footer";
 import FallbackError from "components/FallbackError";
 import DpgError from "components/DpgError";
 
-const darkTheme = createTheme({
-  palette: {
-    mode: "dark",
-  },
-});
+// const darkTheme = createTheme({
+//   palette: {
+//     mode: "dark",
+//     primary: {
+//       light: "#000000",
+//       main: "#1fafa8",
+//       dark: "#ffffff",
+//       contrastText: "#fff",
+//     },
+//     secondary: {
+//       light: "#000000",
+//       main: "#af1f26",
+//       dark: "#ffffff",
+//       contrastText: "#000",
+//     },
+//   },
+// });
 
 function App() {
   return (
     <>
       <FallbackError>
         <BrowserRouter>
-          <ThemeProvider theme={darkTheme}>
-            <main className="bg-dark flex-fill py-1">
-              <TopNav />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/blog" element={<BlogHome />} />
-                <Route path="/blog/:id" element={<Article />} />
-                <Route
-                  path="*"
-                  element={
-                    <DpgError statusCode={404} message={"page not found"} />
-                  }
-                />
-              </Routes>
-            </main>
-          </ThemeProvider>
+          <Box sx={{ flexGrow: 1 }}>
+            <TopNav />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/blog" element={<BlogHome />} />
+              <Route path="/blog/:id" element={<Article />} />
+              <Route
+                path="*"
+                element={
+                  <DpgError statusCode={404} message={"page not found"} />
+                }
+              />
+            </Routes>
+          </Box>
           <Footer />
         </BrowserRouter>
       </FallbackError>

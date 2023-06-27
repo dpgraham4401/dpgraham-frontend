@@ -6,11 +6,11 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 
 function TopNav() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, bgcolor: "secondary.main" }}>
       <AppBar position="static">
         <Toolbar>
           <IconButton
