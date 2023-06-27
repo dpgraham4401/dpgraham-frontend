@@ -8,6 +8,16 @@ import BlogHome from "features/BlogHome";
 import { DpgMenu } from "components/Nav";
 import FallbackError from "components/FallbackError";
 import DpgError from "components/DpgError";
+import backgroundImage from "/static/cool-background.png";
+
+const containerStyle = {
+  width: "100vw",
+  height: "100vh",
+  backgroundImage: `url(${backgroundImage})`,
+  backgroundPosition: "center",
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+};
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -15,7 +25,7 @@ function App() {
     <>
       <FallbackError>
         <BrowserRouter>
-          <Box sx={{ flexGrow: 1 }}>
+          <Box sx={{ flexGrow: 1, ...containerStyle }}>
             <DpgMenu showMenu={showMenu} setShowMenu={setShowMenu} />
             <NavDrawer setShowMenu={setShowMenu} showMenu={showMenu} />
             <Routes>
