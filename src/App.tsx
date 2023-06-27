@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, CssBaseline } from "@mui/material";
 import { NavDrawer } from "components/Nav/NavDrawer";
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -11,11 +11,17 @@ import DpgError from "components/DpgError";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
+
   return (
     <>
+      <CssBaseline />
       <FallbackError>
         <BrowserRouter>
-          <Box sx={{ flexGrow: 1, backgroundColor: "#333333" }}>
+          <Box
+            height="100vh"
+            width="100vw"
+            sx={{ flexGrow: 1, backgroundColor: "#333333" }}
+          >
             <DpgMenu showMenu={showMenu} setShowMenu={setShowMenu} />
             <NavDrawer setShowMenu={setShowMenu} showMenu={showMenu} />
             <Routes>
