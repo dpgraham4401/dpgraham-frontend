@@ -12,10 +12,6 @@ interface Error {
 }
 
 function Home() {
-  const key = "dpgFirstTime";
-  const dpgFirstTime = localStorage.getItem(key);
-  const [showHeadsUp, setShowHeadsUp] = useState(false);
-  const toggleHeadsUp = () => setShowHeadsUp(!showHeadsUp);
   const [blogs, setBlogs] = useState<Blog[] | undefined>(undefined);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | undefined>(undefined);
@@ -43,24 +39,8 @@ function Home() {
       });
   }, []);
 
-  useEffect(() => {
-    if (!dpgFirstTime) {
-      console.log(dpgFirstTime);
-      setShowHeadsUp(true);
-      localStorage.setItem(key, "true");
-    }
-  }, [dpgFirstTime]);
   return (
     <>
-      <DpgToast show={showHeadsUp} setShow={toggleHeadsUp} title="Welcome!">
-        <p>
-          <strong>Heads up!</strong> This is my self-hosted site, I use it as a
-          playground for testing and learning.
-        </p>
-        <p className="text-bg-secondary text-white rounded-5 fw-bold text-center">
-          Expect bugs and low quality content.
-        </p>
-      </DpgToast>
       <Container>
         <DpgCard>
           <DpgCard.Header title="Recent Articles" />
