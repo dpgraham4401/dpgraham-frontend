@@ -1,23 +1,24 @@
-import { Container, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import NavBtn from "./NavBtn";
-import NavMenu from "./NavMenu";
-import { useState } from "react";
+import {
+  AppBar,
+  Box,
+  Button,
+  IconButton,
+  Toolbar,
+  Typography,
+} from "@mui/material";
+import React, { useState } from "react";
 
 function TopNav() {
-  // TopNav component holds state of off canvas Menu
-  const [showMenu, setShowMenu] = useState<boolean>(false);
-  // function to
-  const toggleMenu = () => setShowMenu(!showMenu);
-  const expand = "lg";
   return (
-    <Container>
-      <Navbar key={expand} bg="dark" expand={expand} className="mb-3">
-        <Container fluid>
-          <Navbar.Brand
-            as={Link}
-            className="bg-primary bg-gradient rounded-circle"
-            to="/"
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
           >
             <img
               src="/rp_bg_trans.png"
@@ -25,17 +26,42 @@ function TopNav() {
               height={"100"}
               alt="DPGraham"
             />
-          </Navbar.Brand>
-          <NavBtn expand={expand} toggleNav={toggleMenu} />
-          <NavMenu
-            expand={expand}
-            showMenu={showMenu}
-            toggleMenu={toggleMenu}
-          />
-        </Container>
-      </Navbar>
-    </Container>
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            News
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
+
+  // return (
+  //   <Container>
+  //     <Navbar key={expand} bg="dark" expand={expand} className="mb-3">
+  //       <Container fluid>
+  //         <Navbar.Brand
+  //           as={Link}
+  //           className="bg-primary bg-gradient rounded-circle"
+  //           to="/"
+  //         >
+  //           <img
+  //             src="/rp_bg_trans.png"
+  //             width={"120"}
+  //             height={"100"}
+  //             alt="DPGraham"
+  //           />
+  //         </Navbar.Brand>
+  //         <NavBtn expand={expand} toggleNav={toggleMenu} />
+  //         <NavMenu
+  //           expand={expand}
+  //           showMenu={showMenu}
+  //           toggleMenu={toggleMenu}
+  //         />
+  //       </Container>
+  //     </Navbar>
+  //   </Container>
+  // );
 }
 
 export default TopNav;
