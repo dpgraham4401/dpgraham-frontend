@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
 import { api } from "../../services";
-import { Blog } from "../../types";
-import DpgCard from "../../components/DpgCard";
+import { Blog } from "types";
 import { Link } from "react-router-dom";
+import { Card, CardContent, Container } from "@mui/material";
 
 function BlogHome() {
   const [blogs, setBlogs] = useState<Blog[] | undefined>(undefined);
@@ -31,18 +30,11 @@ function BlogHome() {
   return (
     <>
       <Container>
-        <DpgCard>
-          <DpgCard.Header title="Ramblings for Consumption" />
-          <DpgCard.Body>
-            {loading ? (
-              <DpgCard.Spinner title={error?.message} />
-            ) : blogs ? (
-              listArticles(blogs)
-            ) : (
-              "error"
-            )}
-          </DpgCard.Body>
-        </DpgCard>
+        <Card>
+          <CardContent>
+            {loading ? <p>loading</p> : blogs ? listArticles(blogs) : "error"}
+          </CardContent>
+        </Card>
       </Container>
     </>
   );

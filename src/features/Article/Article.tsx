@@ -1,9 +1,10 @@
+import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Card, CardContent, Container } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { api } from "../../services";
-import { Blog } from "../../types";
-import DpgCard from "../../components/DpgCard";
+import { Blog } from "types";
 import DpgMarkdown from "../../components/DpgMarkdown";
 
 function Article() {
@@ -24,18 +25,22 @@ function Article() {
   return (
     <>
       <Container>
-        <DpgCard>
-          <DpgCard.Header title={article?.title} />
-          <DpgCard.Body>
+        <Card>
+          <CardContent>
             {loading ? (
-              <DpgCard.Spinner />
+              <h1 className="d-flex justify-content-center bg-transparent py-3">
+                <FontAwesomeIcon
+                  className="fa-spin text-muted"
+                  icon={faCircleNotch}
+                />
+              </h1>
             ) : article ? (
               <DpgMarkdown article={article} />
             ) : (
               "ERROR: We're sorry, we're having trouble fetching this article."
             )}
-          </DpgCard.Body>
-        </DpgCard>
+          </CardContent>
+        </Card>
       </Container>
     </>
   );
