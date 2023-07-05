@@ -9,6 +9,7 @@ import {
   Container,
   Grid,
   Typography,
+  useTheme,
 } from "@mui/material";
 
 function ArticleList() {
@@ -48,8 +49,8 @@ function ArticleList() {
           ) : articles ? (
             articles.map((article) => {
               return (
-                <Grid item xs={6} key={article.id}>
-                  <Card sx={{ maxWidth: 345 }}>
+                <Grid item xs={4} key={article.id}>
+                  <Card sx={{ maxWidth: 345, minHeight: 400 }}>
                     <CardContent>
                       <CardMedia
                         component="img"

@@ -7,6 +7,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  useTheme,
 } from "@mui/material";
 import React, { Dispatch, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
@@ -16,6 +17,12 @@ interface NavDrawerProps {
   setShowMenu: Dispatch<SetStateAction<boolean>>;
 }
 
+/**
+ * NavDrawer is the app's off canvas navigation menu.
+ * @param showMenu {boolean} - whether the menu is open or not
+ * @param setShowMenu {Dispatch<SetStateAction<boolean>>} - function to set the state of the menu
+ * @constructor
+ */
 export function NavDrawer({ showMenu, setShowMenu }: NavDrawerProps) {
   const navigate = useNavigate();
   return (
@@ -25,9 +32,16 @@ export function NavDrawer({ showMenu, setShowMenu }: NavDrawerProps) {
       open={showMenu}
       onClose={() => setShowMenu(false)}
       PaperProps={{
-        sx: { width: 240 },
+        sx: {
+          width: {
+            xs: 240,
+            sm: 300,
+            md: 360,
+          },
+        },
       }}
     >
+      {/* ToDo: add menu header*/}
       <Divider />
       <List>
         {routes.map((route, index) => (
