@@ -1,4 +1,4 @@
-import { Article } from "features/Article";
+import { Article } from "features/Articles";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 

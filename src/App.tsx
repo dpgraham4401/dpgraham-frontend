@@ -3,8 +3,7 @@ import { customTheme } from "components/customTheme";
 import { DpgPageError, FallbackError } from "components/DpgError";
 import { AppHeader } from "components/Nav";
 import { NavDrawer } from "components/Nav/NavDrawer";
-import { MarkdownArticle } from "features/Article";
-import { ArticleList } from "features/ArticleList";
+import { Articles } from "features/Articles";
 import { Home } from "features/Home";
 import React, { useMemo, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -35,8 +34,7 @@ function App() {
             <Box p={4}>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/articles" element={<ArticleList />} />
-                <Route path="/articles/:id" element={<MarkdownArticle />} />
+                <Route path="/articles*" element={<Articles />} />
                 <Route
                   path="*"
                   element={
