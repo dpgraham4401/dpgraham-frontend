@@ -2,7 +2,6 @@ import {
   Box,
   createTheme,
   CssBaseline,
-  PaletteMode,
   ThemeProvider,
   useMediaQuery,
 } from "@mui/material";
@@ -14,30 +13,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "features/Home";
 import ArticleList from "features/ArticleList";
 import { AppHeader } from "components/Nav";
-
-// const themeLight = createTheme({
-//   palette: {
-//     mode: "light",
-//     background: {
-//       default: "#dddddd",
-//     },
-//   },
-// });
-//
-// const themeDark = createTheme({
-//   palette: {
-//     mode: "dark",
-//     background: {
-//       default: "#333333",
-//     },
-//     text: {
-//       primary: "#000000",
-//     },
-//     primary: {
-//       main: "#8B4347",
-//     },
-//   },
-// });
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -51,6 +26,16 @@ function App() {
       createTheme({
         palette: {
           mode: darkMode ? "dark" : "light",
+          background: {
+            default: darkMode ? "#333333" : "#dddddd",
+            paper: darkMode ? "#102f2e" : "#ffffff",
+          },
+          primary: {
+            main: "#2db4ad",
+          },
+          secondary: {
+            main: "#a0272f",
+          },
         },
       }),
     [darkMode]

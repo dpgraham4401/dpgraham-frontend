@@ -3,6 +3,7 @@ import React, { Dispatch, SetStateAction } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
+import { useNavigate } from "react-router-dom";
 
 interface TopNavProps {
   showMenu: boolean;
@@ -20,6 +21,7 @@ export function AppHeader({
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
+  const navigate = useNavigate();
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -28,9 +30,9 @@ export function AppHeader({
           <IconButton
             size="small"
             edge="start"
-            color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
+            onClick={() => navigate("/")}
           >
             <img
               src="/rp_bg_trans.png"
