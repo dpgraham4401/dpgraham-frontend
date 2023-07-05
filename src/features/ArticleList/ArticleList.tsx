@@ -1,19 +1,20 @@
-import { DpgPageError } from "components/DpgError";
-import { Article } from "features/Article";
-import React, { useEffect, useState } from "react";
-import { api } from "../../services";
-import { Link as RouterLink } from "react-router-dom";
 import {
   Card,
   CardContent,
-  CardMedia, CircularProgress,
+  CardMedia,
+  CircularProgress,
   Container,
   Grid,
   Link,
-  Typography
+  Typography,
 } from "@mui/material";
+import { DpgPageError } from "components/DpgError";
+import { Article } from "features/Article";
+import React, { useEffect, useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
+import { api } from "../../services";
 
-function ArticleList() {
+export function ArticleList() {
   const [articles, setArticles] = useState<Article[] | undefined>(undefined);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | undefined>(undefined);
@@ -46,14 +47,20 @@ function ArticleList() {
       <Container>
         <Grid container spacing={6} justifyContent="center">
           {loading ? (
-            <Container sx={{ display: 'flex', justifyContent: "center", margin: "100px" }}>
-              <CircularProgress size={100}/>
+            <Container
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                margin: "100px",
+              }}
+            >
+              <CircularProgress size={100} />
             </Container>
           ) : articles ? (
             articles.map((article) => {
               return (
                 <Grid item xs={12} sm={6} md={4} key={article.id}>
-                  <Card sx={{height: 400}}>
+                  <Card sx={{ height: 400 }}>
                     <CardMedia
                       component="img"
                       alt="green iguana"
@@ -89,5 +96,3 @@ function ArticleList() {
     </>
   );
 }
-
-export default ArticleList;

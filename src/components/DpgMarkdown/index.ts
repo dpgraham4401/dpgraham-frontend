@@ -1,3 +1,3 @@
-import DpgMarkdown from "./DpgMarkdown";
+import { DpgMarkdown } from "./DpgMarkdown";
 
-export default DpgMarkdown;
+export { DpgMarkdown };

@@ -1,18 +1,13 @@
-import {
-  Box,
-  CssBaseline,
-  ThemeProvider,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
 import { customTheme } from "components/customTheme";
-import { FallbackError, DpgPageError } from "components/DpgError";
+import { DpgPageError, FallbackError } from "components/DpgError";
+import { AppHeader } from "components/Nav";
 import { NavDrawer } from "components/Nav/NavDrawer";
 import { MarkdownArticle } from "features/Article";
+import { ArticleList } from "features/ArticleList";
+import { Home } from "features/Home";
 import React, { useMemo, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "features/Home";
-import ArticleList from "features/ArticleList";
-import { AppHeader } from "components/Nav";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);

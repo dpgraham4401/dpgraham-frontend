@@ -12,7 +12,7 @@ interface DpgMarkdownProps {
  * @param article {Article}
  * @constructor
  */
-function DpgMarkdown({ article }: DpgMarkdownProps) {
+export function DpgMarkdown({ article }: DpgMarkdownProps) {
   return (
     <ReactMarkdown
       components={{
@@ -25,5 +25,3 @@ function DpgMarkdown({ article }: DpgMarkdownProps) {
     </ReactMarkdown>
   );
 }
-
-export default DpgMarkdown;

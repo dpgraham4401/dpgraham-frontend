@@ -1,7 +1,7 @@
+import { render, screen } from "@testing-library/react";
+import { DpgMarkdown } from "components/DpgMarkdown";
 import { Article } from "features/Article";
 import React from "react";
-import { render, screen } from "@testing-library/react";
-import DpgMarkdown from "components/DpgMarkdown/index";
 
 const mockArticle: Article = {
   id: 1,

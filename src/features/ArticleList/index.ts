@@ -1,3 +1,3 @@
-import ArticleList from "features/ArticleList/ArticleList";
+import { ArticleList } from "./ArticleList";
 
-export default ArticleList;
+export { ArticleList };

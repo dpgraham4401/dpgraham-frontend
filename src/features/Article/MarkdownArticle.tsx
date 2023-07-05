@@ -1,11 +1,11 @@
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card, CardContent, Container } from "@mui/material";
+import { DpgMarkdown } from "components/DpgMarkdown";
 import { Article } from "features/Article/ArticleType";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { api } from "../../services";
-import DpgMarkdown from "components/DpgMarkdown";
 
 export function MarkdownArticle() {
   const { id } = useParams();
