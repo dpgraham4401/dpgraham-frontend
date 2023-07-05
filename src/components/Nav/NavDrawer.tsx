@@ -1,4 +1,3 @@
-import { routes } from "components/Nav/routes";
 import {
   Divider,
   Drawer,
@@ -7,8 +6,8 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  useTheme,
 } from "@mui/material";
+import { routes } from "components/Nav/routes";
 import React, { Dispatch, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -44,7 +43,7 @@ export function NavDrawer({ showMenu, setShowMenu }: NavDrawerProps) {
       {/* ToDo: add menu header*/}
       <Divider />
       <List>
-        {routes.map((route, index) => (
+        {routes.map((route) => (
           <ListItem key={route.id} disablePadding>
             <ListItemButton
               onClick={() => {

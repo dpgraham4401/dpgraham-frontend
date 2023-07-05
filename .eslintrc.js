@@ -12,6 +12,7 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
+    "plugin:@typescript-eslint/recommended",
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -28,5 +29,7 @@ module.exports = {
   },
   rules: {
     "@typescript-eslint/no-shadow": "off",
+    "import/no-unresolved": "off",
+    "import/named": "off",
   },
 };

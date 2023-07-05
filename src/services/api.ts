@@ -19,7 +19,7 @@ function request(method: string) {
     if (body) {
       requestOptions.data = body;
     }
-    return axios(requestOptions as any).then((response) => {
+    return axios(requestOptions).then((response) => {
       // const { data } = response;
       return response;
     });
