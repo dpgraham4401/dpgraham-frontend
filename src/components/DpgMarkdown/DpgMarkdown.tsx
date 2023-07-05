@@ -1,15 +1,15 @@
+import { Article } from "features/Article";
 import React from "react";
 import ReactMarkdown from "react-markdown";
-import { Blog } from "../../types";
 
 interface DpgMarkdownProps {
-  article: Blog;
+  article: Article;
 }
 
 /**
  * Wrapper around react-markdown library for rendering markdown safely
  * that we apply some default styling to.
- * @param article {Blog}
+ * @param article {Article}
  * @constructor
  */
 function DpgMarkdown({ article }: DpgMarkdownProps) {

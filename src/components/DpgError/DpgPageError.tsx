@@ -7,7 +7,7 @@ interface Props {
 }
 
 // Component for displaying errors in a pretty bootstrap card
-function DpgError(props: Props) {
+export function DpgPageError(props: Props) {
   return (
     <Container>
       <Card>
@@ -22,5 +22,3 @@ function DpgError(props: Props) {
     </Container>
   );
 }
-
-export default DpgError;

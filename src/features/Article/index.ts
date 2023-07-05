@@ -1,3 +1,5 @@
-import Article from "./Article";
+import { MarkdownArticle } from "features/Article/MarkdownArticle";
+import { Article } from "features/Article/ArticleType";
 
-export default Article;
+export { MarkdownArticle };
+export type { Article };

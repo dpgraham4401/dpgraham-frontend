@@ -1,11 +1,4 @@
-import {
-  AppBar,
-  Avatar,
-  Box,
-  Button,
-  IconButton,
-  Toolbar,
-} from "@mui/material";
+import { AppBar, Box, Button, IconButton, Toolbar } from "@mui/material";
 import React, { Dispatch, SetStateAction } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 

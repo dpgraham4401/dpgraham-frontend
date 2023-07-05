@@ -1,23 +1,23 @@
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card, CardContent, Container } from "@mui/material";
+import { Article } from "features/Article/ArticleType";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { api } from "../../services";
-import { Blog } from "types";
-import DpgMarkdown from "../../components/DpgMarkdown";
+import DpgMarkdown from "components/DpgMarkdown";
 
-function Article() {
+export function MarkdownArticle() {
   const { id } = useParams();
   const [loading, setLoading] = useState<boolean>(true);
-  const [article, setArticle] = useState<Blog | undefined>(undefined);
+  const [article, setArticle] = useState<Article | undefined>(undefined);
 
   useEffect(() => {
     setLoading(true);
     api
       .get(`blog/${id}`, null)
       .then((response) => {
-        setArticle(response.data as Blog);
+        setArticle(response.data as Article);
       })
       .then(() => setLoading(false));
   }, [id]);
@@ -45,5 +45,3 @@ function Article() {
     </>
   );
 }
-
-export default Article;

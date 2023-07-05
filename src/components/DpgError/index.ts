@@ -1,3 +1,4 @@
-import DpgError from "./DpgError";
+import { DpgPageError } from "components/DpgError/DpgPageError";
+import { FallbackError } from "./FallbackError";
 
-export default DpgError;
+export { FallbackError, DpgPageError };
