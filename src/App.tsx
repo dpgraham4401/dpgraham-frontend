@@ -3,6 +3,7 @@ import { customTheme } from "components/customTheme";
 import { DpgPageError, FallbackError } from "components/DpgError";
 import { AppHeader } from "components/Nav";
 import { NavDrawer } from "components/Nav/NavDrawer";
+import { AboutMe } from "features/AboutMe";
 import { Articles } from "features/Articles";
 import { Home } from "features/Home";
 import React, { useMemo, useState } from "react";
@@ -34,7 +35,8 @@ function App() {
             <Box p={4}>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/articles*" element={<Articles />} />
+                <Route path="/articles/*" element={<Articles />} />
+                <Route path="/about" element={<AboutMe />} />
                 <Route
                   path="*"
                   element={
