@@ -21,4 +21,12 @@ describe("Articles Card", () => {
     );
     expect(screen.getByText(mockArticle.title)).toBeInTheDocument();
   });
+  it("Shows a default image with alternative text", () => {
+    render(
+      <BrowserRouter>
+        <ArticleCard article={mockArticle} />
+      </BrowserRouter>
+    );
+    expect(screen.getByAltText(/default image/i)).toBeInTheDocument();
+  });
 });

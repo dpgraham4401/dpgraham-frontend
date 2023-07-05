@@ -18,7 +18,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
       <Card sx={{ height: 400 }}>
         <CardMedia
           component="img"
-          alt="green iguana"
+          alt="default image with triangles"
           height="140"
           image="/static/cool-background.png"
         />
