@@ -1,0 +1,24 @@
+import { render, screen } from "@testing-library/react";
+import { ArticleCard } from "components/ArticlesOverview/ArticleCard";
+import { Article } from "features/Articles";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+
+const mockArticle: Article = {
+  id: 1,
+  content: "# Hello World",
+  title: "Hello World",
+  updateDate: new Date(),
+  createDate: new Date().toDateString(),
+};
+
+describe("Articles Card", () => {
+  it("shows the article title", () => {
+    render(
+      <BrowserRouter>
+        <ArticleCard article={mockArticle} />
+      </BrowserRouter>
+    );
+    expect(screen.getByText(mockArticle.title)).toBeInTheDocument();
+  });
+});
