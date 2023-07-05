@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { ArticleCard } from "components/ArticlesOverview/ArticleCard";
+import { ArticleCard } from "components/ArticlesOverview";
 import { Article } from "features/Articles";
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
@@ -29,4 +29,5 @@ describe("Articles Card", () => {
     );
     expect(screen.getByAltText(/default image/i)).toBeInTheDocument();
   });
+  // alt="default image with triangles"
 });
