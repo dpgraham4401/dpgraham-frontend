@@ -2,6 +2,7 @@ import { DpgPageError } from "components/DpgError";
 import { Article } from "features/Article";
 import React, { useEffect, useState } from "react";
 import { api } from "../../services";
+import { Link as RouterLink } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -10,7 +11,6 @@ import {
   Grid,
   Link,
   Typography,
-  useTheme,
 } from "@mui/material";
 
 function ArticleList() {
@@ -52,21 +52,24 @@ function ArticleList() {
               return (
                 <Grid item xs={4} key={article.id}>
                   <Card sx={{ maxWidth: 345, minHeight: 400 }}>
+                    <CardMedia
+                      component="img"
+                      alt="green iguana"
+                      height="140"
+                      image="/static/cool-background.png"
+                    />
                     <CardContent>
-                      <CardMedia
-                        component="img"
-                        alt="green iguana"
-                        height="140"
-                        image="/static/cool-background.png"
-                      />
                       {/* ToDo: replace with an ArticleCard component*/}
-                      <p>{article.title}</p>
-                      <Link href={`articles/${article.id}`} underline="none">
+                      <Link
+                        to={`${article.id}`}
+                        underline="none"
+                        component={RouterLink}
+                      >
                         <Typography gutterBottom variant="h5" component="div">
                           {article.title}
                         </Typography>
                       </Link>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography variant="subtitle1" color="text.secondary">
                         Lizards are a widespread group of squamate reptiles,
                         with over 6,000 species, ranging across all continents
                         except Antarctica

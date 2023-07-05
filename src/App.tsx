@@ -5,6 +5,7 @@ import {
   ThemeProvider,
   useMediaQuery,
 } from "@mui/material";
+import { customTheme } from "components/customTheme";
 import { FallbackError, DpgPageError } from "components/DpgError";
 import { NavDrawer } from "components/Nav/NavDrawer";
 import { MarkdownArticle } from "features/Article";
@@ -21,24 +22,7 @@ function App() {
   );
   const [darkMode, setDarkMode] = useState<boolean>(prefersDarkMode);
 
-  const theme = useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode: darkMode ? "dark" : "light",
-          background: {
-            default: darkMode ? "#333333" : "#dddddd",
-          },
-          primary: {
-            main: "#2db4ad",
-          },
-          secondary: {
-            main: "#a0272f",
-          },
-        },
-      }),
-    [darkMode]
-  );
+  const theme = useMemo(() => customTheme(darkMode), [darkMode]);
 
   return (
     <>

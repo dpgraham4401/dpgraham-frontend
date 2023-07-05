@@ -6,6 +6,7 @@ interface Route {
   icon: ReactElement;
   text: string;
   url: string;
+  description?: string;
 }
 
 export const routes: Route[] = [
@@ -20,11 +21,13 @@ export const routes: Route[] = [
     icon: <Feed />,
     text: "Articles",
     url: "/articles",
+    description: "Ramblings for consumption",
   },
   {
     id: "about",
     icon: <Person />,
     text: "About Me",
     url: "/about",
+    description: "My professional background and personal interests",
   },
 ];

@@ -53,7 +53,10 @@ export function NavDrawer({ showMenu, setShowMenu }: NavDrawerProps) {
               }}
             >
               <ListItemIcon>{route.icon}</ListItemIcon>
-              <ListItemText primary={route.text} />
+              <ListItemText
+                primary={route.text}
+                secondary={route.description ? route.description : null}
+              />
             </ListItemButton>
           </ListItem>
         ))}
