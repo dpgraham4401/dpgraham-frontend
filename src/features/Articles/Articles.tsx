@@ -1,4 +1,4 @@
-import { ArticleList } from "components/ArticleList";
+import { ArticlesOverview } from "components/ArticlesOverview";
 import { MarkdownArticle } from "components/MarkdownArticle";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
@@ -14,7 +14,7 @@ export interface Article {
 export function Articles() {
   return (
     <Routes>
-      <Route path="" element={<ArticleList />} />
+      <Route path="" element={<ArticlesOverview />} />
       <Route path=":id" element={<MarkdownArticle />} />
     </Routes>
   );
