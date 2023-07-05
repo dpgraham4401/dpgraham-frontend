@@ -12,7 +12,7 @@ import { DpgPageError } from "components/DpgError";
 import { Article } from "features/Articles";
 import React, { useEffect, useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
-import { api } from "../../services";
+import { api } from "services";
 
 export function ArticleList() {
   const [articles, setArticles] = useState<Article[] | undefined>(undefined);
