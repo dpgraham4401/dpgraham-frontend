@@ -1,5 +1,6 @@
 import { Card } from "@mui/material";
 import React from "react";
+import styles from "./resume.module.css";
 
 /**
  * This Resume is, primarily in HTML and css as part of the cloud resume challenge.
@@ -8,7 +9,7 @@ import React from "react";
 export function CloudChallengeResume() {
   return (
     <Card sx={{ backgroundColor: "white", color: "black", padding: 2 }}>
-      <div>
+      <div className={styles.container}>
         <div>
           <div>
             <span>John</span>
