@@ -28,7 +28,6 @@ function App() {
           mode: darkMode ? "dark" : "light",
           background: {
             default: darkMode ? "#333333" : "#dddddd",
-            paper: darkMode ? "#102f2e" : "#ffffff",
           },
           primary: {
             main: "#2db4ad",

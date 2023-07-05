@@ -33,6 +33,7 @@ export function AppHeader({
             aria-label="menu"
             sx={{ mr: 2 }}
             onClick={() => navigate("/")}
+            style={{ backgroundColor: "#2db4ad" }}
           >
             <img
               src="/rp_bg_trans.png"
@@ -42,12 +43,14 @@ export function AppHeader({
             />
           </IconButton>
           <Box sx={{ flexGrow: 1 }} />
+          {/* Dark Mode button*/}
           <IconButton sx={{ ml: 1 }} onClick={toggleDarkMode} color="inherit">
             {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
-          <Button color="inherit" onClick={() => setShowMenu(!showMenu)}>
+          {/* Toggle navigation button*/}
+          <IconButton color="inherit" onClick={() => setShowMenu(!showMenu)}>
             <MenuIcon fontSize="large" />
-          </Button>
+          </IconButton>
         </Toolbar>
       </AppBar>
     </Box>
