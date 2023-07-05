@@ -7,7 +7,7 @@ interface TopNavProps {
   setShowMenu: Dispatch<SetStateAction<boolean>>;
 }
 
-export function DpgMenu({ showMenu, setShowMenu }: TopNavProps) {
+export function AppHeader({ showMenu, setShowMenu }: TopNavProps) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">

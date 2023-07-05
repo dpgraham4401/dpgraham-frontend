@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "features/Home";
 import ArticleList from "features/ArticleList";
-import { DpgMenu } from "components/Nav";
+import { AppHeader } from "components/Nav";
 
 const themeLight = createTheme({
   palette: {
@@ -37,7 +37,7 @@ function App() {
         <CssBaseline />
         <FallbackError>
           <BrowserRouter>
-            <DpgMenu showMenu={showMenu} setShowMenu={setShowMenu} />
+            <AppHeader showMenu={showMenu} setShowMenu={setShowMenu} />
             <NavDrawer setShowMenu={setShowMenu} showMenu={showMenu} />
             {/* padding around the main content */}
             <Box p={4}>

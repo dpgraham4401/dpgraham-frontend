@@ -1,3 +1,3 @@
-import { DpgMenu } from "components/Nav/DpgMenu";
+import { AppHeader } from "components/Nav/AppHeader";
 
-export { DpgMenu };
+export { AppHeader };
