@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, IconButton, Toolbar } from "@mui/material";
+import { AppBar, Box, IconButton, Toolbar } from "@mui/material";
 import React, { Dispatch, SetStateAction } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
@@ -25,7 +25,7 @@ export function AppHeader({
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{p: 1}}>
         <Toolbar>
           <IconButton
             size="small"
@@ -44,7 +44,7 @@ export function AppHeader({
           </IconButton>
           <Box sx={{ flexGrow: 1 }} />
           {/* Dark Mode button*/}
-          <IconButton sx={{ ml: 1 }} onClick={toggleDarkMode} color="inherit">
+          <IconButton onClick={toggleDarkMode} color="inherit">
             {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
           {/* Toggle navigation button*/}

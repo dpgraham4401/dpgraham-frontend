@@ -6,11 +6,11 @@ import { Link as RouterLink } from "react-router-dom";
 import {
   Card,
   CardContent,
-  CardMedia,
+  CardMedia, CircularProgress,
   Container,
   Grid,
   Link,
-  Typography,
+  Typography
 } from "@mui/material";
 
 function ArticleList() {
@@ -44,14 +44,16 @@ function ArticleList() {
   return (
     <>
       <Container>
-        <Grid container spacing={6}>
+        <Grid container spacing={6} justifyContent="center">
           {loading ? (
-            <p>loading</p>
+            <Container sx={{ display: 'flex', justifyContent: "center", margin: "100px" }}>
+              <CircularProgress size={100}/>
+            </Container>
           ) : articles ? (
             articles.map((article) => {
               return (
-                <Grid item xs={4} key={article.id}>
-                  <Card sx={{ maxWidth: 345, minHeight: 400 }}>
+                <Grid item xs={12} sm={6} md={4} key={article.id}>
+                  <Card sx={{height: 400}}>
                     <CardMedia
                       component="img"
                       alt="green iguana"

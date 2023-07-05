@@ -1,7 +1,8 @@
 import { createTheme } from "@mui/material";
 
 export const PRIMARY_COLOR = "#2db4ad";
-export const SECONDARY_COLOR = "#bd1920";
+export const SECONDARY_COLOR_DARK = "#f75e5f";
+export const SECONDARY_COLOR_LIGHT = "#6b0009";
 
 export const customTheme = (darkMode: boolean) => {
   return createTheme({
@@ -14,14 +15,14 @@ export const customTheme = (darkMode: boolean) => {
         main: PRIMARY_COLOR,
       },
       secondary: {
-        main: SECONDARY_COLOR,
+        main: SECONDARY_COLOR_DARK,
       },
     },
     components: {
       MuiListItemIcon: {
         styleOverrides: {
           root: {
-            color: SECONDARY_COLOR,
+            color: darkMode ? SECONDARY_COLOR_DARK : SECONDARY_COLOR_LIGHT,
           },
         },
       },

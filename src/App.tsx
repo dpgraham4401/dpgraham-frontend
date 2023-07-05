@@ -1,6 +1,5 @@
 import {
   Box,
-  createTheme,
   CssBaseline,
   ThemeProvider,
   useMediaQuery,
