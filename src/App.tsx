@@ -6,6 +6,7 @@ import { NavDrawer } from "components/Nav/NavDrawer";
 import { AboutMe } from "features/AboutMe";
 import { Articles } from "features/Articles";
 import { Home } from "features/Home";
+import { Resume } from "features/Resume/Resume";
 import React, { useMemo, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -37,6 +38,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/articles/*" element={<Articles />} />
                 <Route path="/about" element={<AboutMe />} />
+                <Route path="/resume" element={<Resume />} />
                 <Route
                   path="*"
                   element={
