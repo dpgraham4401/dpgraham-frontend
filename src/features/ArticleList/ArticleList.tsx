@@ -8,6 +8,7 @@ import {
   CardMedia,
   Container,
   Grid,
+  Link,
   Typography,
   useTheme,
 } from "@mui/material";
@@ -60,9 +61,11 @@ function ArticleList() {
                       />
                       {/* ToDo: replace with an ArticleCard component*/}
                       <p>{article.title}</p>
-                      <Typography gutterBottom variant="h5" component="div">
-                        {article.title}
-                      </Typography>
+                      <Link href={`articles/${article.id}`} underline="none">
+                        <Typography gutterBottom variant="h5" component="div">
+                          {article.title}
+                        </Typography>
+                      </Link>
                       <Typography variant="body2" color="text.secondary">
                         Lizards are a widespread group of squamate reptiles,
                         with over 6,000 species, ranging across all continents
