@@ -17,34 +17,11 @@ function DpgMarkdown({ article }: DpgMarkdownProps) {
     <ReactMarkdown
       components={{
         img: ({ ...props }) => (
-          <img
-            style={{ maxWidth: "100%" }}
-            alt={"alt description"}
-            {...props}
-          />
-        ),
-        pre: ({ ...props }) => (
-          <pre
-            style={{
-              background: "var(--dpg-lightgray)",
-              borderRadius: "10px",
-              padding: "10px",
-            }}
-            {...props}
-          />
-        ),
-        code: ({ ...props }) => (
-          <code
-            style={{
-              borderRadius: "5px",
-              padding: "1px 5px",
-            }}
-            {...props}
-          />
+          <img style={{ maxWidth: "100%" }} alt="alt description" {...props} />
         ),
       }}
     >
-      {article.content}
+      {article.content.toString()}
     </ReactMarkdown>
   );
 }

@@ -1,8 +1,8 @@
 /* custom.css */
 :root {
-    --dpg-teal: #1fafa8;
-    --diametric-red: #af1f26;
-    --dpg-lightgray: #e6e8e8;
+    --dpg-teal: #2db4ad;
+    --dpg-red-light: #f75e5f;
+    --dpg-red-dark: #6b0009;
 }
 
 body {
@@ -11,4 +11,12 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--dpg-teal);
+}
+
+a:hover {
+    color: var(--dpg-red-light);
 }
