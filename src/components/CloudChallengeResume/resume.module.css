@@ -35,6 +35,15 @@
     font-weight: 300;
 }
 
+.twoColumns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.twoColumns > * {
+    padding: 0 1rem;
+}
+
 .contactSection {
     margin: 10px 0;
     padding: 1px 1rem;
@@ -48,7 +57,6 @@
     grid-template-columns: 1fr 1fr;
 }
 
-/* columns */
 .contactInfo > * {
     padding: 0 1rem;
 }
@@ -114,6 +122,22 @@
     text-transform: uppercase;
 }
 
+.subSectionTitle {
+    font-weight: bold;
+    color: black;
+    font-size: large;
+}
+
+.subSectionDescription {
+    font-style: italic;
+    color: #555;
+    font-size: 1rem;
+}
+
+.subSectionBullet {
+    margin-top: 0;
+}
+
 .sectionListItem {
     margin-bottom: 20px;
 }
@@ -137,12 +161,12 @@
 }
 
 .left {
-    width: 60%;
+    width: 70%;
 }
 
 .right {
     text-align: right;
-    width: 39%;
+    width: 29%;
 }
 
 .name {

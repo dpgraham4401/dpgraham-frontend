@@ -77,78 +77,134 @@ export function CloudChallengeResume() {
               {/* EPA */}
               <div className={styles.sectionListItem}>
                 <div className={styles.left}>
-                  <div className={styles.name}>
+                  <div className={styles.subSectionTitle}>
+                    Full-Stack Developer
+                  </div>
+                  <div className={styles.subSectionDescription}>
                     United States Environmental Protection Agency (EPA)
                   </div>
-                  <div>Washington, DC</div>
-                  <div>May 2020 - Present</div>
                 </div>
                 <div className={styles.right}>
-                  <div className={styles.name}>
-                    Full-Stack developer and environmental policy writer
-                  </div>
-                  <div>did This and that</div>
+                  <div>May 2020 - Present</div>
                 </div>
+                <ul className={styles.subSectionBullet}>
+                  <li>
+                    Implemented new data analysis methods to group related
+                    hazardous waste sites and automated outreach to exceed
+                    hazardous waste generator registration targets.{" "}
+                  </li>
+                  <li>
+                    Interfaced with stakeholder to collect, triage, and analyze
+                    e-Manifest data-quality issues.
+                  </li>
+                  <li>
+                    Designed, developed, and published an open-source web
+                    application using modern web technologies, such as Django
+                    and React, to track hazardous waste shipments with
+                    electronic manifests instead of the current paper intensive
+                    process.{" "}
+                  </li>
+                  <li>
+                    Published API client libraries (TypeScript and Python) and
+                    expanded documentation and guidance for stakeholders seeking
+                    to use e-Manifest.
+                  </li>
+                </ul>
               </div>
               {/* Teaching Assistant */}
               <div className={styles.sectionListItem}>
                 <div className={styles.left}>
-                  <div className={styles.name}>
+                  <div className={styles.subSectionTitle}>
+                    Teaching Assistant
+                  </div>
+                  <div className={styles.subSectionDescription}>
                     University of Texas at Dallas
                   </div>
-                  <div>Dallas, TX</div>
-                  <div>Jan 2018 - May 2020</div>
                 </div>
                 <div className={styles.right}>
-                  <div className={styles.name}>Teaching Assistant</div>
-                  <div>did This and that</div>
+                  <div>Jan 2018 - May 2020</div>
                 </div>
+                <ul className={styles.subSectionBullet}>
+                  <li>
+                    Ensured that students completed courses with a working
+                    knowledge of the subject through lecturing, office hours,
+                    classroom preparation, field trips, grading. Classes
+                    include:
+                  </li>
+                  <ul className={styles.twoColumns}>
+                    <li>Exploratory Data Analysis</li>
+                    <li>Applied Geophysics</li>
+                    <li>3D Reservoir Modeling</li>
+                    <li>History or Earth and Life</li>
+                  </ul>
+                </ul>
               </div>
               {/* Exploration Geophysics Intern */}
               <div className={styles.sectionListItem}>
                 <div className={styles.left}>
-                  <div className={styles.name}>Occidental Petroleum</div>
-                  <div>Houston, TX</div>
-                  <div>May 2019 - Aug 2019</div>
-                </div>
-                <div className={styles.right}>
-                  <div className={styles.name}>
+                  <div className={styles.subSectionTitle}>
                     Exploration Geophysics Intern
                   </div>
-                  <div>did This and that</div>
+                  <div className={styles.subSectionDescription}>
+                    Occidental Petroleum
+                  </div>
                 </div>
+                <div className={styles.right}>
+                  <div>May 2019 - Aug 2019</div>
+                </div>
+                <ul className={styles.subSectionBullet}>
+                  <li>
+                    Equipped Bolivian exploratory team with expected seismic
+                    response in Cretaceous fluvial formations for prospect
+                    generation and well planning.
+                  </li>
+                  <li>
+                    Utilized quantitative-interpretation and seismic inversion
+                    in Naranjillos field to resolve compartmentalization in key
+                    reservoirs and propose new well locations.
+                  </li>
+                </ul>
               </div>
               {/* Environmental Scientist */}
               <div className={styles.sectionListItem}>
                 <div className={styles.left}>
-                  <div className={styles.name}>
-                    Alliance Technical Group (Formerly Alliance Source Testing
-                    LLC.)
+                  <div className={styles.subSectionTitle}>
+                    Environmental Scientist
                   </div>
-                  <div>Dallas, TX</div>
+                  <div className={styles.subSectionDescription}>
+                    Alliance Technical Group (Formerly Alliance Source Testing)
+                  </div>
+                </div>
+                <div className={styles.right}>
                   <div>Feb 2016 - May 2018</div>
                 </div>
-                <div className={styles.right}>
-                  <div className={styles.name}>Environmental Scientist</div>
-                  <div>did This and that</div>
+                <ul className={styles.subSectionBullet}>
+                  <li>
+                    Planned and executed industrial atmospheric emission testing
+                    with federal and state defined wet chemistry methods to
+                    determine client pollution rates and self-reported accuracy.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            {/* Climbing Wall*/}
+            <div className={styles.sectionListItem}>
+              <div className={styles.left}>
+                <div className={styles.subSectionTitle}>
+                  Climbing Wall Manager
+                </div>
+                <div className={styles.subSectionDescription}>
+                  Southern Methodist University
                 </div>
               </div>
-              {/* Climbing Wall*/}
-              <div className={styles.sectionListItem}>
-                <div className={styles.left}>
-                  <div className={styles.name}>
-                    Southern Methodist University
-                  </div>
-                  <div>Dallas, TX</div>
-                  <div>Dec 2011 - May 2015</div>
-                </div>
-                <div className={styles.right}>
-                  <div className={styles.name}>Climbing Wall Manager</div>
-                  <div>did This and that</div>
-                  <div className={styles.name}>Trip Leader</div>
-                  <div>did This and that</div>
-                </div>
+              <div className={styles.right}>
+                <div>Dec 2011 - May 2015</div>
               </div>
+              <ul className={styles.subSectionBullet}>
+                <li>hello</li>
+                <li></li>
+                <li></li>
+              </ul>
             </div>
           </div>
           {/* Education */}
@@ -158,24 +214,28 @@ export function CloudChallengeResume() {
               {/* UTD */}
               <div className={styles.sectionListItem}>
                 <div className={styles.left}>
-                  <div className={styles.name}>
+                  <div className={styles.subSectionTitle}>
                     Master of Science in Geophysics
                   </div>
-                  <div>University of Texas at Dallas (UTD)</div>
-                  <div>2018 - 2020</div>
-                </div>
-                <div className={styles.right}>
+                  <div className={styles.subSectionDescription}>
+                    University of Texas at Dallas (UTD)
+                  </div>
                   <div>
                     Thesis: Interpretation-Based Full-Waveform Inversion
                   </div>
+                  <div>2018 - 2020</div>
                 </div>
               </div>
               {/* SMU */}
               <div className={styles.sectionListItem}>
                 <div className={styles.left}>
-                  <div className={styles.name}>Bachelors of Science</div>
+                  <div className={styles.subSectionTitle}>
+                    Bachelors of Science
+                  </div>
+                  <div className={styles.subSectionDescription}>
+                    Southern Methodist university (SMU)
+                  </div>
                   <div>Minor in Mathematics</div>
-                  <div>Southern Methodist university (SMU)</div>
                   <div>2011 - 2015</div>
                 </div>
               </div>
