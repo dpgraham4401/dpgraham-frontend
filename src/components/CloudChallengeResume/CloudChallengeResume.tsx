@@ -5,7 +5,7 @@ import {
   LocationOn,
   Phone,
 } from "@mui/icons-material";
-import { Container } from "@mui/material";
+import { Container, Link } from "@mui/material";
 import React from "react";
 import styles from "./resume.module.css";
 
@@ -35,12 +35,19 @@ export function CloudChallengeResume() {
           <div className={styles.contactSection}>
             <div className={styles.contactInfo}>
               {/* Email */}
-              <div className={styles.contactInfoItem}>
-                <Email className={styles.contactInfoIcon} />
-                <span className={styles.contactInfoField}>
-                  dpgraham4401@gmail.com
-                </span>
-              </div>
+              <Link
+                href="mailto:dpgraham4401@gmail.com"
+                underline={"none"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className={styles.contactInfoItem}>
+                  <Email className={styles.contactInfoIcon} />
+                  <span className={styles.contactInfoField}>
+                    dpgraham4401@gmail.com
+                  </span>
+                </div>
+              </Link>
               {/* Phone */}
               <div className={styles.contactInfoItem}>
                 <Phone className={styles.contactInfoIcon} />
@@ -52,19 +59,33 @@ export function CloudChallengeResume() {
                 <span className={styles.contactInfoField}>Washington, DC</span>
               </div>
               {/* LinkedIn */}
-              <div className={styles.contactInfoItem}>
-                <LinkedIn className={styles.contactInfoIcon} />
-                <span className={styles.contactInfoField}>
-                  linkedin.com/in/dpgraham4401
-                </span>
-              </div>
+              <Link
+                href="https://linkedin.com/in/dpgraham4401"
+                underline={"none"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className={styles.contactInfoItem}>
+                  <LinkedIn className={styles.contactInfoIcon} />
+                  <span className={styles.contactInfoField}>
+                    linkedin.com/in/dpgraham4401
+                  </span>
+                </div>
+              </Link>
               {/* GitHub */}
-              <div className={styles.contactInfoItem}>
-                <GitHub className={styles.contactInfoIcon} />
-                <span className={styles.contactInfoField}>
-                  github.com/dpgraham4401
-                </span>
-              </div>
+              <Link
+                href="https://github.com/dpgraham4401"
+                underline={"none"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className={styles.contactInfoItem}>
+                  <GitHub className={styles.contactInfoIcon} />
+                  <span className={styles.contactInfoField}>
+                    github.com/dpgraham4401
+                  </span>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
