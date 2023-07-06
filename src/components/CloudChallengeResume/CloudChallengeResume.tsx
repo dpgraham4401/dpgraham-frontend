@@ -1,3 +1,10 @@
+import {
+  Email,
+  GitHub,
+  LinkedIn,
+  LocationOn,
+  Phone,
+} from "@mui/icons-material";
 import { Container } from "@mui/material";
 import React from "react";
 import styles from "./resume.module.css";
@@ -15,27 +22,54 @@ export function CloudChallengeResume() {
             <span className={styles.firstName}>David</span>
             <span className={styles.lastName}>Graham</span>
           </div>
-          <div className={styles.contactInfo}>
-            <span className={styles.email}>Email: </span>
-            <span>dpgraham4401@gmail.com</span>
-            <span className={styles.separator}></span>
-            <span className={styles.phone}>Phone: </span>
-            <span>214-263-4401</span>
-          </div>
-          <div>
+          <div className={styles.position}>Full Stack Developer</div>
+          <div className={styles.summary}>
             {/* Summary ToDo: update*/}
-            <span className={styles.position}>Full-Stack Developer</span>
             <span>
-              I am a full-stack developer, well versed in analyzing a wide array
-              of problems and developing cost-effective solutions. Thrives under
-              pressure and is proficient in communicating complex concepts to
-              diverse audiences. Seeking a work environment with diverse ideas
-              and opportunities for continued growth.
+              Full-stack developer versed in cloud infrastructure and proficient
+              at developing cost-effective solutions. Seeking a work environment
+              with diverse ideas and opportunities for continued growth.
             </span>
+          </div>
+          {/* Contact info */}
+          <div className={styles.contactSection}>
+            <div className={styles.contactInfo}>
+              {/* Email */}
+              <div className={styles.contactInfoItem}>
+                <Email className={styles.contactInfoIcon} />
+                <span className={styles.contactInfoField}>
+                  dpgraham4401@gmail.com
+                </span>
+              </div>
+              {/* Phone */}
+              <div className={styles.contactInfoItem}>
+                <Phone className={styles.contactInfoIcon} />
+                <span className={styles.contactInfoField}>214-263-4401</span>
+              </div>
+              {/* Location */}
+              <div className={styles.contactInfoItem}>
+                <LocationOn className={styles.contactInfoIcon} />
+                <span className={styles.contactInfoField}>Washington, DC</span>
+              </div>
+              {/* LinkedIn */}
+              <div className={styles.contactInfoItem}>
+                <LinkedIn className={styles.contactInfoIcon} />
+                <span className={styles.contactInfoField}>
+                  linkedin.com/in/dpgraham4401
+                </span>
+              </div>
+              {/* GitHub */}
+              <div className={styles.contactInfoItem}>
+                <GitHub className={styles.contactInfoIcon} />
+                <span className={styles.contactInfoField}>
+                  github.com/dpgraham4401
+                </span>
+              </div>
+            </div>
           </div>
         </div>
         {/* Body */}
-        <div className={styles.details}>
+        <div className={styles.contents}>
           {/* Experience */}
           <div className={styles.section}>
             <div className={styles.sectionTitle}>Experience</div>
@@ -150,25 +184,63 @@ export function CloudChallengeResume() {
           {/* Skills */}
           <div className={styles.section}>
             <div className={styles.sectionTitle}>Skills</div>
+            <div className={styles.skillsSection}>
+              <div className={styles.left}>
+                <div className={styles.name}>Hard</div>
+              </div>
+              <div className={styles.skillsRow}>
+                <div className={styles.skill}>Devops</div>
+                <div className={styles.skill}>CI/CD</div>
+                <div className={styles.skill}>Linux</div>
+                <div className={styles.skill}>Containerization</div>
+                <div className={styles.skill}>Cloud Infrastructure</div>
+              </div>
+            </div>
             <div>
-              <div className={styles.skillsItem}>
+              <div className={styles.skillsSection}>
                 <div className={styles.left}>
-                  <div className={styles.name}>Hard</div>
+                  <div className={styles.name}>Tools and Languages</div>
                 </div>
-                <div className={styles.skills}>
-                  <div className={styles.skill}>JavaScript </div>
-                  <div className={styles.skill}>JavaScript </div>
-                  <div className={styles.skill}>JavaScript </div>
-                  <div className={styles.skill}>JavaScript </div>
-                  <div className={styles.skill}>JavaScript </div>
-                  <div className={styles.skill}>JavaScript </div>
+                <div className={styles.skillsRow}>
+                  <div className={styles.skill}>Python</div>
+                  <div className={styles.skill}>JavaScript/TypeScript</div>
+                  <div className={styles.skill}>SQL</div>
+                  <div className={styles.skill}>Go</div>
+                  <div className={styles.skill}>Bash/shell scripting</div>
+                  <div className={styles.skill}>Git</div>
+                  <div className={styles.skill}>Docker</div>
+                  <div className={styles.skill}>Kubernetes</div>
+                  <div className={styles.skill}>Django</div>
+                  <div className={styles.skill}>React.js</div>
+                  <div className={styles.skill}>GitHub Actions</div>
+                  <div className={styles.skill}>Terraform</div>
                 </div>
               </div>
-              <div className={styles.skillsItem}>
+              <div className={styles.skillsSection}>
                 <div className={styles.left}>
                   <div className={styles.name}>Soft</div>
                 </div>
+                <div className={styles.skillsRow}>
+                  <div className={styles.skill}>Public Speaking</div>
+                  <div className={styles.skill}>Problem Analysis</div>
+                  <div className={styles.skill}>Project Management</div>
+                  <div className={styles.skill}>Customer Service</div>
+                  <div className={styles.skill}>Attention to Detail</div>
+                </div>
               </div>
+            </div>
+          </div>
+          {/* Certifications and Courses */}
+          <div className={styles.section}>
+            <div className={styles.sectionTitle}>Certification and Courses</div>
+            <div className={styles.compactListItem}>
+              Google Cloud Associate Cloud Engineer
+            </div>
+            <div className={styles.compactListItem}>
+              Microsoft GitHub Actions Workshop
+            </div>
+            <div className={styles.compactListItem}>
+              McCoy RCRA Hazardous Waste Training
             </div>
           </div>
           {/* Awards */}
@@ -231,15 +303,6 @@ export function CloudChallengeResume() {
               </div>
             </div>
           </div>
-          {/* Interests */}
-          <div className={styles.section}>
-            <div className={styles.sectionTitle}>Interests</div>
-            <div>
-              <div className={styles.sectionListItem}>
-                Programming, rock climbing, sailing, backpacking.
-              </div>
-            </div>
-          </div>
           {/* Publications */}
           <div className={styles.section}>
             <div className={styles.sectionTitle}>Publications</div>
@@ -265,6 +328,15 @@ export function CloudChallengeResume() {
                   </i>
                   , presented at the 98th annual meeting, AGU.
                 </div>
+              </div>
+            </div>
+          </div>
+          {/* Interests */}
+          <div className={styles.section}>
+            <div className={styles.sectionTitle}>Interests</div>
+            <div>
+              <div className={styles.sectionListItem}>
+                Programming, rock climbing, sailing, backpacking.
               </div>
             </div>
           </div>

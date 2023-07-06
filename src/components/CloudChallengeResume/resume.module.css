@@ -1,3 +1,7 @@
+/* Style Sheet for Cloud Resume Challenge */
+:root {
+    --primary-color: #2db4ad;
+}
 
 .container {
     font-family: 'Lato', sans-serif;
@@ -31,8 +35,39 @@
     font-weight: 300;
 }
 
+.contactSection {
+    margin: 10px 0;
+    padding: 1px 1rem;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
 .contactInfo {
-    margin-bottom: 20px;
+    padding: 5px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* columns */
+.contactInfo > * {
+    padding: 0 1rem;
+}
+
+.contactInfoItem {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contactInfoField {
+    margin-left: 1rem;
+    font-weight: 300;
+    color: #222;
+}
+
+.contactInfoIcon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
 }
 
 .email ,
@@ -49,18 +84,21 @@
 }
 
 .position {
-    font-weight: bold;
+    font-size: x-large;
+    color: gray;
     display: inline-block;
-    margin-right: 10px;
-    text-decoration: underline;
 }
 
-.details {
+.summary {
+    line-height: 1rem;
+}
+
+.contents {
     line-height: 20px;
 }
 
 .section {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .section:last-of-type {
@@ -69,14 +107,15 @@
 
 .sectionTitle {
     letter-spacing: 2px;
-    color: #54AFE4;
+    color: var(--primary-color);
     font-weight: bold;
+    font-size: large;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
 .sectionListItem {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .sectionListItem:last-of-type {
@@ -110,18 +149,7 @@
     font-weight: bold;
 }
 
-a {
-    text-decoration: none;
-    color: #000;
-    font-style: italic;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #000;
-}
-
-.skills {
+.skillsRow {
     display: flex;
     flex-wrap: wrap;
 }
@@ -130,28 +158,14 @@ a:hover {
     margin: 0 10px;
 }
 
-.skillsItem {
+.skillsSection {
     margin-bottom: 10px;
 }
 
-.skillsItem:last-of-type {
+.skillsSection:last-of-type {
     margin-bottom: 0;
 }
 
 input {
     display: none;
 }
-
-label {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: #C3DEF3;
-    border-radius: 20px;
-    margin-right: 3px;
-}
-
-input:checked + label {
-    background: #79A9CE;
-}
-
