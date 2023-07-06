@@ -6,5 +6,6 @@ import React from "react";
  * @constructor
  */
 export function Resume() {
+  // ToDo - Add a way to download PDF resume
   return <CloudChallengeResume />;
 }
