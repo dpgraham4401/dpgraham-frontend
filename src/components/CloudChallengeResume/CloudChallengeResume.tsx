@@ -201,9 +201,20 @@ export function CloudChallengeResume() {
                 <div>Dec 2011 - May 2015</div>
               </div>
               <ul className={styles.subSectionBullet}>
-                <li>hello</li>
-                <li></li>
-                <li></li>
+                <li>
+                  Streamlined daily safety inspections for the SMU climbing wall
+                  staff to allow management to understand equipment status at a
+                  glance.
+                </li>
+                <li>
+                  Supervised the implementation of an intercollegiate climbing
+                  competition with over 300 attendees and dozens of sponsors.
+                </li>
+                <li>
+                  Undertook a year long training program to become an Outdoor
+                  Trip Guide. Planned and guiding various commercial outdoor
+                  excursions across the U.S. southwest.
+                </li>
               </ul>
             </div>
           </div>
@@ -388,15 +399,6 @@ export function CloudChallengeResume() {
                   </i>
                   , presented at the 98th annual meeting, AGU.
                 </div>
-              </div>
-            </div>
-          </div>
-          {/* Interests */}
-          <div className={styles.section}>
-            <div className={styles.sectionTitle}>Interests</div>
-            <div>
-              <div className={styles.sectionListItem}>
-                Programming, rock climbing, sailing, backpacking.
               </div>
             </div>
           </div>
