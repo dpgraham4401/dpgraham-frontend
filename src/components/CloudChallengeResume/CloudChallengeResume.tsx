@@ -1,4 +1,4 @@
-import { Card } from "@mui/material";
+import { Container } from "@mui/material";
 import React from "react";
 import styles from "./resume.module.css";
 
@@ -8,163 +8,232 @@ import styles from "./resume.module.css";
  */
 export function CloudChallengeResume() {
   return (
-    <Card sx={{ backgroundColor: "white", color: "black", padding: 2 }}>
+    <Container sx={{ justifyContent: "center" }}>
       <div className={styles.container}>
-        <div>
-          <div>
-            <span>John</span>
-            <span>Doe</span>
+        <div className={styles.header}>
+          <div className={styles.fullName}>
+            <span className={styles.firstName}>David</span>
+            <span className={styles.lastName}>Graham</span>
+          </div>
+          <div className={styles.contactInfo}>
+            <span className={styles.email}>Email: </span>
+            <span>dpgraham4401@gmail.com</span>
+            <span className={styles.separator}></span>
+            <span className={styles.phone}>Phone: </span>
+            <span>214-263-4401</span>
           </div>
           <div>
-            <span>Email: </span>
-            <span>john.doe@gmail.com</span>
-            <span></span>
-            <span>Phone: </span>
-            <span>111-222-3333</span>
-          </div>
-
-          <div>
-            <span>Front-End Developer </span>
+            {/* Summary ToDo: update*/}
+            <span className={styles.position}>Full-Stack Developer</span>
             <span>
-              I am a front-end developer with more than 3 years of experience
-              writing html, css, and js. I&apos;m motivated, result-focused and
-              seeking a successful team-oriented company with opportunity to
-              grow.
+              I am a full-stack developer, well versed in analyzing a wide array
+              of problems and developing cost-effective solutions. Thrives under
+              pressure and is proficient in communicating complex concepts to
+              diverse audiences. Seeking a work environment with diverse ideas
+              and opportunities for continued growth.
             </span>
           </div>
         </div>
-        <div>
-          <div>
-            <div>Experience</div>
+        {/* Body */}
+        <div className={styles.details}>
+          {/* Experience */}
+          <div className={styles.section}>
+            <div className={styles.sectionTitle}>Experience</div>
             <div>
-              <div>
-                <div>
-                  <div>KlowdBox</div>
-                  <div>San Fr, CA</div>
-                  <div>Jan 2011 - Feb 2015</div>
+              {/* EPA */}
+              <div className={styles.sectionListItem}>
+                <div className={styles.left}>
+                  <div className={styles.name}>
+                    United States Environmental Protection Agency (EPA)
+                  </div>
+                  <div>Washington, DC</div>
+                  <div>May 2020 - Present</div>
                 </div>
-                <div>
-                  <div>Fr developer</div>
+                <div className={styles.right}>
+                  <div className={styles.name}>
+                    Full-Stack developer and environmental policy writer
+                  </div>
                   <div>did This and that</div>
                 </div>
               </div>
-              <div>
-                <div>
-                  <div>Akount</div>
-                  <div>San Monica, CA</div>
-                  <div>Jan 2011 - Feb 2015</div>
+              {/* Teaching Assistant */}
+              <div className={styles.sectionListItem}>
+                <div className={styles.left}>
+                  <div className={styles.name}>
+                    University of Texas at Dallas
+                  </div>
+                  <div>Dallas, TX</div>
+                  <div>Jan 2018 - May 2020</div>
                 </div>
-                <div>
-                  <div>Fr developer</div>
+                <div className={styles.right}>
+                  <div className={styles.name}>Teaching Assistant</div>
+                  <div>did This and that</div>
+                </div>
+              </div>
+              {/* Exploration Geophysics Intern */}
+              <div className={styles.sectionListItem}>
+                <div className={styles.left}>
+                  <div className={styles.name}>Occidental Petroleum</div>
+                  <div>Houston, TX</div>
+                  <div>May 2019 - Aug 2019</div>
+                </div>
+                <div className={styles.right}>
+                  <div className={styles.name}>
+                    Exploration Geophysics Intern
+                  </div>
+                  <div>did This and that</div>
+                </div>
+              </div>
+              {/* Environmental Scientist */}
+              <div className={styles.sectionListItem}>
+                <div className={styles.left}>
+                  <div className={styles.name}>
+                    Alliance Technical Group (Formerly Alliance Source Testing
+                    LLC.)
+                  </div>
+                  <div>Dallas, TX</div>
+                  <div>Feb 2016 - May 2018</div>
+                </div>
+                <div className={styles.right}>
+                  <div className={styles.name}>Environmental Scientist</div>
+                  <div>did This and that</div>
+                </div>
+              </div>
+              {/* Climbing Wall*/}
+              <div className={styles.sectionListItem}>
+                <div className={styles.left}>
+                  <div className={styles.name}>
+                    Southern Methodist University
+                  </div>
+                  <div>Dallas, TX</div>
+                  <div>Dec 2011 - May 2015</div>
+                </div>
+                <div className={styles.right}>
+                  <div className={styles.name}>Climbing Wall Manager</div>
+                  <div>did This and that</div>
+                  <div className={styles.name}>Trip Leader</div>
                   <div>did This and that</div>
                 </div>
               </div>
             </div>
           </div>
-          <div>
-            <div>Education</div>
+          {/* Education */}
+          <div className={styles.section}>
+            <div className={styles.sectionTitle}>Education</div>
             <div>
-              <div>
-                <div>
-                  <div>Sample Institute of technology</div>
-                  <div>San Fr, CA</div>
-                  <div>Jan 2011 - Feb 2015</div>
+              {/* UTD */}
+              <div className={styles.sectionListItem}>
+                <div className={styles.left}>
+                  <div className={styles.name}>
+                    Master of Science in Geophysics
+                  </div>
+                  <div>University of Texas at Dallas (UTD)</div>
+                  <div>2018 - 2020</div>
                 </div>
-                <div>
-                  <div>Fr developer</div>
-                  <div>did This and that</div>
+                <div className={styles.right}>
+                  <div>
+                    Thesis: Interpretation-Based Full-Waveform Inversion
+                  </div>
                 </div>
               </div>
-              <div>
-                <div>
-                  <div>Akount</div>
-                  <div>San Monica, CA</div>
-                  <div>Jan 2011 - Feb 2015</div>
-                </div>
-                <div>
-                  <div>Fr developer</div>
-                  <div>did This and that</div>
+              {/* SMU */}
+              <div className={styles.sectionListItem}>
+                <div className={styles.left}>
+                  <div className={styles.name}>Bachelors of Science</div>
+                  <div>Minor in Mathematics</div>
+                  <div>Southern Methodist university (SMU)</div>
+                  <div>2011 - 2015</div>
                 </div>
               </div>
             </div>
           </div>
-          <div>
-            <div>Projects</div>
-            <div>
-              <div>
-                <div>DSP</div>
-                <div>
-                  I am a front-end developer with more than 3 years of
-                  experience writing html, css, and js. I&apos;m motivated,
-                  result-focused and seeking a successful team-oriented company
-                  with opportunity to grow.
+          {/* Skills */}
+          <div className={styles.section}>
+            <div className={styles.sectionTitle}>Skills</div>
+            <div className={styles.skills}>
+              <div className={styles.skillsItem}>
+                <div className={styles.left}>
+                  <div className={styles.name}>Javascript</div>
                 </div>
               </div>
-
-              <div>
-                <div>DSP</div>
-                <div>
-                  I am a front-end developer with more than 3 years of
-                  experience writing html, css, and js. I&apos;m motivated,
-                  result-focused and seeking a successful team-oriented company
-                  with opportunity to grow. <a href="/login">link</a>
-                </div>
+            </div>
+            <div className={styles.skillsItem}>
+              <div className={styles.left}>
+                <div className={styles.name}>CSS</div>
               </div>
             </div>
           </div>
-          <div>
-            <div>Skills</div>
-            <div>
-              <div>
-                <div>
-                  <div>Javascript</div>
+          {/* Awards */}
+          <div className={styles.section}>
+            <div className={styles.sectionTitle}>Awards</div>
+            {/* EPA Generator Registration */}
+            <div className={styles.awardListItem}>
+              <div className={styles.left}>
+                <div className={styles.name}>
+                  EPA Outstanding Performance Management
                 </div>
-                <div>
-                  <input id="ck1" type="checkbox" checked />
-
-                  <label htmlFor="ck1">asdf</label>
-                  <input id="ck2" type="checkbox" checked />
-
-                  <label htmlFor="ck2">asdf</label>
-                  <input id="ck3" type="checkbox" />
-
-                  <label htmlFor="ck3">asdf</label>
-                  <input id="ck4" type="checkbox" />
-                  <label htmlFor="ck4">asdf</label>
-                  <input id="ck5" type="checkbox" />
-                  <label htmlFor="ck5">ha</label>
-                </div>
+                <div>EPA National Awards</div>
+              </div>
+              <div className={styles.right}>
+                <div className={styles.name}>2023</div>
               </div>
             </div>
-            <div>
-              <div>
-                <div>CSS</div>
+            {/* ORCR 2022 */}
+            <div className={styles.awardListItem}>
+              <div className={styles.left}>
+                <div className={styles.name}>
+                  Serving the Public with Integrity and a Strong Work Ethic
+                </div>
+                <div>Office of Resource Conservation and Recovery (ORCR)</div>
               </div>
-              <div>
-                <input id="ck1" type="checkbox" checked />
-
-                <label htmlFor="ck1">foo</label>
-                <input id="ck2" type="checkbox" checked />
-
-                <label htmlFor="ck2">hello</label>
-                <input id="ck3" type="checkbox" />
-
-                <label htmlFor="ck3">hello</label>
-                <input id="ck4" type="checkbox" />
-                <label htmlFor="ck4">foo</label>
-                <input id="ck5" type="checkbox" />
-                <label htmlFor="ck5">alsdk</label>
+              <div className={styles.right}>
+                <div className={styles.name}>2022</div>
+              </div>
+            </div>
+            {/* ORCR 2021 */}
+            <div className={styles.awardListItem}>
+              <div className={styles.left}>
+                <div className={styles.name}>
+                  Serving the Public with Integrity and a Strong Work Ethic
+                </div>
+                <div>Office of Resource Conservation and Recovery (ORCR)</div>
+              </div>
+              <div className={styles.right}>
+                <div className={styles.name}>2021</div>
+              </div>
+            </div>
+            {/* ORCR 2020 */}
+            <div className={styles.awardListItem}>
+              <div className={styles.left}>
+                <div className={styles.name}>People as our Strength</div>
+                <div>Office of Resource Conservation and Recovery (ORCR)</div>
+              </div>
+              <div className={styles.right}>
+                <div className={styles.name}>2020</div>
+              </div>
+            </div>
+            {/* Eagle Scout */}
+            <div className={styles.awardListItem}>
+              <div className={styles.left}>
+                <div className={styles.name}>Eagle Scout</div>
+                <div>Boy Scouts of America</div>
+              </div>
+              <div className={styles.right}>
+                <div className={styles.name}>2011</div>
               </div>
             </div>
           </div>
-          <div>
-            <div>Interests</div>
+          {/* Interests */}
+          <div className={styles.section}>
+            <div className={styles.sectionTitle}>Interests</div>
             <div>
-              <div>Football, programming.</div>
+              <div className={styles.sectionListItem}>
+                Programming, rock climbing, sailing, backpacking.
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </Card>
+    </Container>
   );
 }
