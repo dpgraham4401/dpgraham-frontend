@@ -150,16 +150,24 @@ export function CloudChallengeResume() {
           {/* Skills */}
           <div className={styles.section}>
             <div className={styles.sectionTitle}>Skills</div>
-            <div className={styles.skills}>
+            <div>
               <div className={styles.skillsItem}>
                 <div className={styles.left}>
-                  <div className={styles.name}>Javascript</div>
+                  <div className={styles.name}>Hard</div>
+                </div>
+                <div className={styles.skills}>
+                  <div className={styles.skill}>JavaScript </div>
+                  <div className={styles.skill}>JavaScript </div>
+                  <div className={styles.skill}>JavaScript </div>
+                  <div className={styles.skill}>JavaScript </div>
+                  <div className={styles.skill}>JavaScript </div>
+                  <div className={styles.skill}>JavaScript </div>
                 </div>
               </div>
-            </div>
-            <div className={styles.skillsItem}>
-              <div className={styles.left}>
-                <div className={styles.name}>CSS</div>
+              <div className={styles.skillsItem}>
+                <div className={styles.left}>
+                  <div className={styles.name}>Soft</div>
+                </div>
               </div>
             </div>
           </div>
@@ -167,7 +175,7 @@ export function CloudChallengeResume() {
           <div className={styles.section}>
             <div className={styles.sectionTitle}>Awards</div>
             {/* EPA Generator Registration */}
-            <div className={styles.awardListItem}>
+            <div className={styles.compactListItem}>
               <div className={styles.left}>
                 <div className={styles.name}>
                   EPA Outstanding Performance Management
@@ -179,7 +187,7 @@ export function CloudChallengeResume() {
               </div>
             </div>
             {/* ORCR 2022 */}
-            <div className={styles.awardListItem}>
+            <div className={styles.compactListItem}>
               <div className={styles.left}>
                 <div className={styles.name}>
                   Serving the Public with Integrity and a Strong Work Ethic
@@ -191,7 +199,7 @@ export function CloudChallengeResume() {
               </div>
             </div>
             {/* ORCR 2021 */}
-            <div className={styles.awardListItem}>
+            <div className={styles.compactListItem}>
               <div className={styles.left}>
                 <div className={styles.name}>
                   Serving the Public with Integrity and a Strong Work Ethic
@@ -203,7 +211,7 @@ export function CloudChallengeResume() {
               </div>
             </div>
             {/* ORCR 2020 */}
-            <div className={styles.awardListItem}>
+            <div className={styles.compactListItem}>
               <div className={styles.left}>
                 <div className={styles.name}>People as our Strength</div>
                 <div>Office of Resource Conservation and Recovery (ORCR)</div>
@@ -213,7 +221,7 @@ export function CloudChallengeResume() {
               </div>
             </div>
             {/* Eagle Scout */}
-            <div className={styles.awardListItem}>
+            <div className={styles.compactListItem}>
               <div className={styles.left}>
                 <div className={styles.name}>Eagle Scout</div>
                 <div>Boy Scouts of America</div>
@@ -229,6 +237,34 @@ export function CloudChallengeResume() {
             <div>
               <div className={styles.sectionListItem}>
                 Programming, rock climbing, sailing, backpacking.
+              </div>
+            </div>
+          </div>
+          {/* Publications */}
+          <div className={styles.section}>
+            <div className={styles.sectionTitle}>Publications</div>
+            <div>
+              <div className={styles.compactListItem}>
+                <div>
+                  <b>Graham, D.,</b> D. Lumley, W. Zhou, J. Shragge, J. Bourget,
+                  2019,{" "}
+                  <i>
+                    Interpretation-based full waveform Inversion of a western
+                    Australian data set
+                  </i>
+                  , 88th Annual International Meeting, SEG, Expanded
+                  Abstracts,1863-1867
+                </div>
+              </div>
+              <div className={styles.compactListItem}>
+                <div>
+                  Sica, C., <b>Graham, D.</b> [and 11 others], 2017,{" "}
+                  <i>
+                    Geophysical investigation of Tyouni Pueblo in Bandelier
+                    National Monument, New Mexico, USA
+                  </i>
+                  , presented at the 98th annual meeting, AGU.
+                </div>
               </div>
             </div>
           </div>
