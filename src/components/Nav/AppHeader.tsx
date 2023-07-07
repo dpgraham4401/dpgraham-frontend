@@ -23,6 +23,11 @@ export function AppHeader({
   };
   const navigate = useNavigate();
 
+  let iconBG = "#2db4ad";
+  if (!darkMode) {
+    iconBG = "#282828";
+  }
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ p: 1 }}>
@@ -33,7 +38,7 @@ export function AppHeader({
             aria-label="menu"
             sx={{ mr: 2 }}
             onClick={() => navigate("/")}
-            style={{ backgroundColor: "#2db4ad" }}
+            style={{ backgroundColor: iconBG }}
           >
             <img
               src="/rp_bg_trans.png"
