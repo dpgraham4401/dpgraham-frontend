@@ -1,3 +1,4 @@
+import { GitHub, OpenInNew } from "@mui/icons-material";
 import {
   Divider,
   Drawer,
@@ -59,6 +60,28 @@ export function NavDrawer({ showMenu, setShowMenu }: NavDrawerProps) {
             </ListItemButton>
           </ListItem>
         ))}
+      </List>
+      <List style={{ marginTop: "auto" }}>
+        <ListItem disablePadding>
+          <ListItemButton
+            href="https://github.com/dpgraham4401/dpgraham-client/issues"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ListItemIcon>
+              <GitHub />
+            </ListItemIcon>
+            <ListItemText
+              primary={
+                <div style={{ display: "flex", alignContent: "baseline" }}>
+                  Report and Issue
+                  <OpenInNew fontSize={"small"} sx={{ marginLeft: 1 }} />
+                </div>
+              }
+              secondary="Found a bug? Give us your feedback"
+            />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Drawer>
   );
