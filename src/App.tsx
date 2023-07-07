@@ -1,4 +1,4 @@
-import { Box, CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
+import { CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
 import { customTheme } from "components/customTheme";
 import { DpgPageError, FallbackError } from "components/DpgError";
 import { AppHeader } from "components/Nav";
@@ -33,20 +33,19 @@ function App() {
             />
             <NavDrawer setShowMenu={setShowMenu} showMenu={showMenu} />
             {/* padding around the main content */}
-            <Box p={4}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/articles/*" element={<Articles />} />
-                <Route path="/about" element={<AboutMe />} />
-                <Route path="/resume" element={<Resume />} />
-                <Route
-                  path="*"
-                  element={
-                    <DpgPageError statusCode={404} message={"page not found"} />
-                  }
-                />
-              </Routes>
-            </Box>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/articles/*" element={<Articles />} />
+              <Route path="/about" element={<AboutMe />} />
+              <Route path="/resume" element={<Resume />} />
+              <Route
+                path="*"
+                element={
+                  <DpgPageError statusCode={404} message={"page not found"} />
+                }
+              />
+            </Routes>
+            {/*</Box>*/}
           </BrowserRouter>
         </FallbackError>
       </ThemeProvider>

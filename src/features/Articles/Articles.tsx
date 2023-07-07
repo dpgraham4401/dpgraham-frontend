@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { ArticlesOverview } from "components/ArticlesOverview";
 import { MarkdownArticle } from "components/MarkdownArticle";
 import React from "react";
@@ -13,9 +14,11 @@ export interface Article {
 
 export function Articles() {
   return (
-    <Routes>
-      <Route path="" element={<ArticlesOverview />} />
-      <Route path=":id" element={<MarkdownArticle />} />
-    </Routes>
+    <Box padding={4}>
+      <Routes>
+        <Route path="" element={<ArticlesOverview />} />
+        <Route path=":id" element={<MarkdownArticle />} />
+      </Routes>
+    </Box>
   );
 }

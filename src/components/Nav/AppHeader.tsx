@@ -1,8 +1,8 @@
-import { AppBar, Box, IconButton, Toolbar } from "@mui/material";
-import React, { Dispatch, SetStateAction } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
+import MenuIcon from "@mui/icons-material/Menu";
+import { AppBar, Box, IconButton, Toolbar } from "@mui/material";
+import React, { Dispatch, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface TopNavProps {
@@ -25,7 +25,7 @@ export function AppHeader({
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{p: 1}}>
+      <AppBar position="static" sx={{ p: 1, pb: 3 }}>
         <Toolbar>
           <IconButton
             size="small"
