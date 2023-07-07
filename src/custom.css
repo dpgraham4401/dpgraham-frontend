@@ -46,7 +46,7 @@ a:hover {
     animation: Gradient 50s ease infinite;
 }
 
-.darkGradient {
+.lightGradient {
     width: 100vw;
     height: 100vh;
     color: #fff;

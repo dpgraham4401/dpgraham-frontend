@@ -1,14 +1,16 @@
 import { Box, Grid, IconButton, Typography } from "@mui/material";
-import React from "react";
+import { AppContext } from "components/appContext";
+import React, { useContext } from "react";
 
 /**
  * Landing Page
  * @constructor
  */
 export function Home() {
+  const { darkMode } = useContext(AppContext);
   return (
     <>
-      <Box className={"darkGradient"}>
+      <Box className={darkMode ? "darkGradient" : "lightGradient"}>
         <Grid
           container
           direction="column"

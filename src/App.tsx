@@ -1,4 +1,5 @@
 import { CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
+import { AppContext } from "components/appContext";
 import { customTheme } from "components/customTheme";
 import { DpgPageError, FallbackError } from "components/DpgError";
 import { AppHeader } from "components/Nav";
@@ -21,34 +22,35 @@ function App() {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <FallbackError>
-          <BrowserRouter>
-            <AppHeader
-              showMenu={showMenu}
-              setShowMenu={setShowMenu}
-              darkMode={darkMode}
-              setDarkMode={setDarkMode}
-            />
-            <NavDrawer setShowMenu={setShowMenu} showMenu={showMenu} />
-            {/* padding around the main content */}
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/articles/*" element={<Articles />} />
-              <Route path="/about" element={<AboutMe />} />
-              <Route path="/resume" element={<Resume />} />
-              <Route
-                path="*"
-                element={
-                  <DpgPageError statusCode={404} message={"page not found"} />
-                }
+      <AppContext.Provider value={{ showMenu, darkMode }}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <FallbackError>
+            <BrowserRouter>
+              <AppHeader
+                showMenu={showMenu}
+                setShowMenu={setShowMenu}
+                darkMode={darkMode}
+                setDarkMode={setDarkMode}
               />
-            </Routes>
-            {/*</Box>*/}
-          </BrowserRouter>
-        </FallbackError>
-      </ThemeProvider>
+              <NavDrawer setShowMenu={setShowMenu} showMenu={showMenu} />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/articles/*" element={<Articles />} />
+                <Route path="/about" element={<AboutMe />} />
+                <Route path="/resume" element={<Resume />} />
+                <Route
+                  path="*"
+                  element={
+                    <DpgPageError statusCode={404} message={"page not found"} />
+                  }
+                />
+              </Routes>
+              {/*</Box>*/}
+            </BrowserRouter>
+          </FallbackError>
+        </ThemeProvider>
+      </AppContext.Provider>
     </>
   );
 }
