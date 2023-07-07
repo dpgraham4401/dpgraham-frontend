@@ -16,7 +16,7 @@ image:
   pullPolicy: Always
   port: 3000
   # Overrides the image tag whose default is the chart appVersion (i.e., should be the git/release tag)
-  tag: "v0.0.22"
+  tag: "v0.0.23"
 
 imagePullSecrets: [ ]
 nameOverride: ""
