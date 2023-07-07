@@ -35,7 +35,8 @@ export function AppHeader({
           <IconButton
             size="small"
             edge="start"
-            aria-label="menu"
+            aria-label="home"
+            name="home"
             sx={{ mr: 2 }}
             onClick={() => navigate("/")}
             style={{ backgroundColor: iconBG }}
@@ -49,11 +50,21 @@ export function AppHeader({
           </IconButton>
           <Box sx={{ flexGrow: 1 }} />
           {/* Dark Mode button*/}
-          <IconButton onClick={toggleDarkMode} color="inherit">
+          <IconButton
+            onClick={toggleDarkMode}
+            color="inherit"
+            aria-label="dark-mode-button"
+            name="toggle-dark-mode"
+          >
             {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
           {/* Toggle navigation button*/}
-          <IconButton color="inherit" onClick={() => setShowMenu(!showMenu)}>
+          <IconButton
+            color="inherit"
+            onClick={() => setShowMenu(!showMenu)}
+            aria-label="toggle-menu-button"
+            name="toggle-menu"
+          >
             <MenuIcon fontSize="large" />
           </IconButton>
         </Toolbar>
