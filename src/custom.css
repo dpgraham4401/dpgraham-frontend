@@ -1,8 +1,14 @@
 /* custom.css */
 :root {
-    --dpg-teal: #2db4ad;
+    --dpg-teal: #3DB6B0;
     --dpg-red-light: #f75e5f;
     --dpg-red-dark: #6b0009;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
 }
 
 body {
@@ -19,4 +25,39 @@ a {
 
 a:hover {
     color: var(--dpg-red-light);
+}
+
+.dark-gradient {
+    width: 100vw;
+    height: 90vh;
+    color: #fff;
+    background: linear-gradient(-45deg, var(--dpg-teal), #2db4ad, #333333, #222222);
+    background-size: 300% 300%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0 50%
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0 50%
+    }
 }
