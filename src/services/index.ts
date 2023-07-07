@@ -1,3 +1,4 @@
-import api from './api';
+import { useQuery } from "services/hooks";
+import { api } from "./api";
 
-export { api };
+export { api, useQuery };

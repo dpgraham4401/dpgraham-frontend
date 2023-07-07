@@ -27,11 +27,9 @@ function request(method: string) {
 }
 
 // eslint-disable-next-line import/prefer-default-export
-const api = {
+export const api = {
   get: request("GET"),
   post: request("POST"),
   put: request("PUT"),
   delete: request("DELETE"),
 };
-
-export default api;

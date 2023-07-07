@@ -2,32 +2,11 @@ import { CircularProgress, Container, Grid } from "@mui/material";
 import { ArticlesGrid } from "components/ArticlesOverview/ArticlesGrid";
 import { DpgPageError } from "components/DpgError";
 import { Article } from "features/Articles";
-import React, { useEffect, useState } from "react";
-import { api } from "services";
+import React from "react";
+import { useQuery } from "services";
 
 export function ArticlesOverview() {
-  const [articles, setArticles] = useState<Article[] | undefined>(undefined);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<Error | undefined>(undefined);
-  useEffect(() => {
-    setLoading(true);
-    api
-      .get("blog", null)
-      .then((response) => {
-        if (response.status === 200) {
-          setArticles(response.data as Article[]);
-        } else {
-          setError(response.data);
-        }
-      })
-      .then(() => {
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error(error);
-        setError(error);
-      });
-  }, []);
+  const [articles, loading, error] = useQuery<Article[]>("blog");
 
   if (error) {
     return <DpgPageError statusCode={404} message={error.message} />;
