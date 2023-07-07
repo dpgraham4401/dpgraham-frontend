@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import { ArticleCard } from "components/ArticlesOverview/ArticleCard";
+import { ArticleCard } from "components/article/ArticleCard";
 import { Article } from "features/Articles";
 import React from "react";
 

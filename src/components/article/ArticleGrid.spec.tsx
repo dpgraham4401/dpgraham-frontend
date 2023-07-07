@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { ArticlesGrid } from "components/ArticlesOverview/ArticlesGrid";
+import { ArticlesGrid } from "components/article/ArticlesGrid";
 import { Article } from "features/Articles";
 import React from "react";
 import { BrowserRouter } from "react-router-dom";

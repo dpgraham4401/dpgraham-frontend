@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { ArticleCard } from "components/ArticlesOverview";
+import { ArticleCard } from "components/article";
 import { Article } from "features/Articles";
 import React from "react";
 import { BrowserRouter } from "react-router-dom";

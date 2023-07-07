@@ -1,5 +1,5 @@
 import { CircularProgress, Container, Grid } from "@mui/material";
-import { ArticlesGrid } from "components/ArticlesOverview/ArticlesGrid";
+import { ArticlesGrid } from "components/article/ArticlesGrid";
 import { DpgPageError } from "components/DpgError";
 import { Article } from "features/Articles";
 import React from "react";
