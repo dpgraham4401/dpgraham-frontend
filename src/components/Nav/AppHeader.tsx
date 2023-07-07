@@ -25,7 +25,7 @@ export function AppHeader({
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ p: 1, pb: 3 }}>
+      <AppBar position="static" sx={{ p: 1 }}>
         <Toolbar>
           <IconButton
             size="small"

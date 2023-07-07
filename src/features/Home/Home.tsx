@@ -10,7 +10,7 @@ export function Home() {
   const { darkMode } = useContext(AppContext);
   return (
     <>
-      <Box className={darkMode ? "darkGradient" : "lightGradient"}>
+      <Box className={darkMode ? "darkGradient" : "lightGradient"} p={2}>
         <Grid
           container
           direction="column"
