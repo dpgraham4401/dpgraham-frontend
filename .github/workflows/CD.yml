@@ -21,7 +21,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ${{ env.docker_user }}/${{ env.IMAGE_NAME }}
+          images: ${{ env.docker_user }}/${{ env.image_name }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
