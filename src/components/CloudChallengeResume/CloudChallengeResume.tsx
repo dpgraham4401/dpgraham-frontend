@@ -33,7 +33,7 @@ export function CloudChallengeResume() {
           </div>
           {/* Contact info */}
           <div className={styles.contactSection}>
-            <div className={styles.contactInfo}>
+            <div className={styles.contactInfoColumn}>
               {/* Email */}
               <Link
                 href="mailto:dpgraham4401@gmail.com"
@@ -58,6 +58,8 @@ export function CloudChallengeResume() {
                 <LocationOn className={styles.contactInfoIcon} />
                 <span className={styles.contactInfoField}>Washington, DC</span>
               </div>
+            </div>
+            <div className={styles.contactInfoColumn}>
               {/* LinkedIn */}
               <Link
                 href="https://linkedin.com/in/dpgraham4401"
@@ -67,9 +69,7 @@ export function CloudChallengeResume() {
               >
                 <div className={styles.contactInfoItem}>
                   <LinkedIn className={styles.contactInfoIcon} />
-                  <span className={styles.contactInfoField}>
-                    linkedin.com/in/dpgraham4401
-                  </span>
+                  <span className={styles.contactInfoField}>dpgraham4401</span>
                 </div>
               </Link>
               {/* GitHub */}

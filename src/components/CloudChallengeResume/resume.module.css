@@ -49,20 +49,20 @@
     padding: 1px 1rem;
     background-color: lightgray;
     border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.contactInfo {
-    padding: 5px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.contactInfo > * {
-    padding: 0 1rem;
+.contactInfoColumn {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .contactInfoItem {
-    margin-bottom: 10px;
+    padding: 0.1rem 0;
+    margin: 0.25rem 10px;
     display: flex;
     align-items: center;
     white-space: nowrap;
