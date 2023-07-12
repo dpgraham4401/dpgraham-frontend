@@ -1,0 +1,70 @@
+# This Workflow builds and pushes a Docker image to Google Artifact Registry
+
+# Prerequisites:
+# 1. Create service account
+#   1a. Service Account Token Creator
+# 2. Generate service account key
+#   2a. convert multiline key to single line with jq command (cat key.json | jq -r tostring)
+#   2b. create environment secret, Name: GOOGLE_CREDENTIALS_JSON, Value: key.json contents
+# 3. Make sure the Artifact repo has already been provisioned. Add to env:
+
+name: Docker build and push to Artifact Registry
+
+on:
+  push:
+    branches:
+      - main
+  release:
+    types: [published]
+
+env:
+  PROJECT_ID: dpgraham
+  GOOGLE_REGISTRY_LOCATION: us-east1
+  REPOSITORY: dpgraham-com
+  IMAGE_NAME: dpgraham-client
+
+jobs:
+  build-push:
+    environment: staging
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Docker meta
+        uses: docker/metadata-action@v4
+        id: meta
+        with:
+          images: ${{ env.GOOGLE_REGISTRY_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=sha
+
+      - name: Authenticate Google Cloud
+        uses: google-github-actions/auth@v1
+        id: auth
+        with:
+          credentials_json: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+          token_format: 'access_token'
+
+      - name: Login to Google Artifact Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ${{ env.GOOGLE_REGISTRY_LOCATION }}-docker.pkg.dev
+          username: 'oauth2accesstoken'
+          password: ${{ steps.auth.outputs.access_token }}
+
+      - name: Build and Push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}

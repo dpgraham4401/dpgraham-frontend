@@ -2,11 +2,6 @@ name: Test
 # This will run when a tag is pushed
 
 on:
-  push:
-    paths:
-      - '**/*.ts'
-      - '**/*.tsx'
-      - '.github/workflows/test.yaml'
   pull_request:
     paths:
       - '**/*.ts'
