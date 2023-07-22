@@ -4,8 +4,8 @@ name: 'Build Image for GitHub Container Registry'
 
 on:
   push:
-#    tags:
-#      - '*'
+    tags:
+      - '*'
 
 jobs:
   build_docker_image:

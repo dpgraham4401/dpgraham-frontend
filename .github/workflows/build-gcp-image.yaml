@@ -10,10 +10,10 @@
 
 name: Docker build and push to Artifact Registry
 
-#    branches:
-#      - main
 on:
   push:
+    branches:
+      - main
   release:
     types: [ published ]
 
