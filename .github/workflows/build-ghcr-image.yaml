@@ -1,0 +1,46 @@
+name: 'Build Image for GitHub Container Registry'
+# This workflow will build a docker image, tag it, and push it to the GitHub Container Registry
+# - It will name the image the same as the repository name
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build_docker_image:
+    name: Build Image for GHCR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          # Uses the repository name as the image name
+          images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=ref,event=pr
+            type=ref,event=tag
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=sha
+          flavor: |
+            latest=auto
+
+      - name: Login to GitHub Image Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}

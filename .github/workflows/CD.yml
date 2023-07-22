@@ -43,18 +43,3 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
-  deploy_docker_image:
-    needs: build_docker_image
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get tag
-        id: tag
-        uses: dawidd6/action-get-tag@v1
-
-      - name: Deploy
-        uses: actions-hub/kubectl@master
-        env:
-          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
-        with:
-          args: set image -n dpgraham deployments.apps/dpgclient-dpg-client dpg-client=dpgraham4401/dpg-client:${{steps.tag.outputs.tag}}
