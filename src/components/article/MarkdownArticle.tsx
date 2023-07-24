@@ -1,6 +1,7 @@
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card, CardContent, Container } from "@mui/material";
+import { DpgPageError } from "components/DpgError";
 import { DpgMarkdown } from "components/DpgMarkdown";
 import { Article } from "features/Articles";
 import React from "react";
@@ -9,7 +10,11 @@ import { useQuery } from "services";
 
 export function MarkdownArticle() {
   const { id } = useParams();
-  const [article, loading, error] = useQuery<Article>(`blog/${id}`);
+  const [article, loading, error] = useQuery<Article>(`article/${id}`);
+
+  if (error) {
+    return <DpgPageError statusCode={404} message={error.message} />;
+  }
 
   return (
     <>

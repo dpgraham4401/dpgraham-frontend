@@ -6,7 +6,7 @@ import React from "react";
 import { useQuery } from "services";
 
 export function ArticlesOverview() {
-  const [articles, loading, error] = useQuery<Article[]>("blog");
+  const [articles, loading, error] = useQuery<Article[]>("article");
 
   if (error) {
     return <DpgPageError statusCode={404} message={error.message} />;
