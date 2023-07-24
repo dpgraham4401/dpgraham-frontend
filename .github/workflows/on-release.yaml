@@ -21,7 +21,7 @@ jobs:
     with:
       environment: production
       version: ${{ needs.build_gcp_image.outputs.version }}
-      service: dpgraham-server
+      service: dpgraham-client
     secrets: inherit
 
   build_ghcr_image:
