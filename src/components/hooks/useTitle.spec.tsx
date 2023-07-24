@@ -30,7 +30,7 @@ afterEach(() => {
 });
 
 describe("useTitle", () => {
-  it('sets the initial page title, plus " | Haztrak"', () => {
+  it('sets the initial page title, plus " | David Paul Graham"', () => {
     render(<TestComponent />);
     expect(document.title).toContain(originalPageTitle);
   });
@@ -47,10 +47,10 @@ describe("useTitle", () => {
   });
   it("appends Global site title to each page title by default", () => {
     render(<TestComponent />);
-    expect(document.title).toContain("Haztrak");
+    expect(document.title).toContain("David Paul Graham");
   });
   it("does not appends Global site title if specified", () => {
     render(<TestComponent excludeAppend={true} />);
-    expect(document.title).not.toContain("Haztrak");
+    expect(document.title).not.toContain("David Paul Graham");
   });
 });
