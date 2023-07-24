@@ -11,26 +11,34 @@
 name: Docker build and push to Artifact Registry
 
 on:
-  push:
-    branches:
-      - main
-  release:
-    types: [ published ]
+  workflow_call:
+    inputs:
+      environment:
+        description: 'The environment to deploy to'
+        required: true
+        type: string
+        default: 'production'
+    outputs:
+      version:
+        description: 'The version of the image that was built'
+        value: ${{ jobs.build_push.outputs.version }}
 
 env:
-  PROJECT_ID: dpgraham
-  GOOGLE_REGISTRY_LOCATION: us-east1
-  REPOSITORY: dpgraham-com
-  IMAGE_NAME: dpgraham-client
+  PROJECT_ID: ${{ vars.PROJECT_ID }}
+  REPOSITORY: ${{ vars.REPOSITORY }}
+  IMAGE_NAME: ${{ vars.IMAGE_NAME }}
+  GOOGLE_REGISTRY_LOCATION: ${{ vars.GOOGLE_REGISTRY_LOCATION }}
 
 jobs:
-  build-push:
+  build_push:
     name: Build Image for GCP
-    environment: dev
+    environment: ${{ inputs.environment }}
     permissions:
       contents: 'read'
       id-token: 'write'
     runs-on: ubuntu-latest
+    outputs:
+      version: ${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
 
     steps:
       - name: Checkout
@@ -42,7 +50,6 @@ jobs:
         with:
           images: ${{ env.GOOGLE_REGISTRY_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=ref,event=branch
             type=ref,event=pr
             type=ref,event=tag
             type=semver,pattern={{version}}
