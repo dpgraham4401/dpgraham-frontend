@@ -27,11 +27,11 @@ export function ArticleCard({ article }: ArticleCardProps) {
             <Typography gutterBottom variant="h5" component="div">
               {article.title}
             </Typography>
+            <Typography variant="subtitle1" color="text.secondary">
+              We are still working on implementing sub titles for these cards.
+              Read more...
+            </Typography>
           </Link>
-          <Typography variant="subtitle1" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
         </CardContent>
       </Card>
     </>
