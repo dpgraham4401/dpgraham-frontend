@@ -1,4 +1,5 @@
 import { Box, Grid, IconButton, Typography } from "@mui/material";
+import { useTitle } from "components/hooks";
 import React from "react";
 
 /**
@@ -6,6 +7,7 @@ import React from "react";
  * @constructor
  */
 export function Home() {
+  useTitle("Home");
   return (
     <>
       <Box className={"aniGradient"} p={2}>

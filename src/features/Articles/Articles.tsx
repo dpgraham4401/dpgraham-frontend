@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import { ArticlesOverview, MarkdownArticle } from "components/article";
+import { useTitle } from "components/hooks";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
@@ -12,6 +13,7 @@ export interface Article {
 }
 
 export function Articles() {
+  useTitle("Articles");
   return (
     <Box padding={4}>
       <Routes>

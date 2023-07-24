@@ -18,13 +18,15 @@ export function useTitle(
   const [dynTitle, setDynTitle] = useState<string | undefined>(undefined);
 
   useEffect(() => {
-    document.title = `${title}${excludeSuffix ? "" : " | Haztrak"}`;
-  }, [title]);
+    document.title = `${title}${excludeSuffix ? "" : " | David Paul Graham"}`;
+  }, [excludeSuffix, title]);
 
   useEffect(() => {
     if (typeof dynTitle === "string")
-      document.title = `${dynTitle}${excludeSuffix ? "" : " | Haztrak"}`;
-  }, [dynTitle]);
+      document.title = `${dynTitle}${
+        excludeSuffix ? "" : " | David Paul Graham"
+      }`;
+  }, [dynTitle, excludeSuffix]);
 
   useEffect(
     // run on unmount
@@ -33,7 +35,7 @@ export function useTitle(
         document.title = defaultTitle.current;
       }
     },
-    []
+    [resetOnUnmount]
   );
   return [dynTitle, setDynTitle] as const;
 }

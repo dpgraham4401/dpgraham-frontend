@@ -1,4 +1,5 @@
 import { CloudChallengeResume } from "components/CloudChallengeResume";
+import { useTitle } from "components/hooks";
 import React from "react";
 
 /**
@@ -7,5 +8,6 @@ import React from "react";
  */
 export function Resume() {
   // ToDo - Add a way to download PDF resume
+  useTitle("Resume");
   return <CloudChallengeResume />;
 }
