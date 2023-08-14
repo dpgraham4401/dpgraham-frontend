@@ -50,7 +50,7 @@
     "vite-plugin-eslint": "^1.8.1",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^0.32.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^3.4.0"
   },
   "browserslist": {
     "production": [
