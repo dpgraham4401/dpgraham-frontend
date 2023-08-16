@@ -7,6 +7,8 @@ on:
       - '**/*.ts'
       - '**/*.tsx'
       - '.github/workflows/test.yaml'
+      - 'package.json'
+      - 'package-lock.json'
   workflow_call:
   workflow_dispatch:
 
