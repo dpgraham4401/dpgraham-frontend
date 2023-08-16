@@ -76,7 +76,8 @@ autolabeler:
       - '/workflow/gmi'
   - label: 'dependencies'
     files:
-      - 'package*.json'
+      - 'package.json'
+      - 'package-lock.json'
 
   # template for the release notes (changelog)
 template: |
