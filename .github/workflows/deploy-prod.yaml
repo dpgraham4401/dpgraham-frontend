@@ -1,4 +1,5 @@
-# This Workflow deploys a Docker image to Google Cloud Run
+# This Workflow builds a docker image using the production Dockerfile and deploys it to Google Cloud Run.
+# It will only run if the repo is dpgraham-com/dpgraham-client and triggered by a published release.
 
 name: On Release
 
@@ -8,13 +9,15 @@ on:
 
 jobs:
   build_gcp_image:
-    name: Build Image for GCP
+    if: github.repository == 'dpgraham-com/dpgraham-client'
+    name: Build Image for Production
     uses: ./.github/workflows/build-gcp-image.yaml
     with:
       environment: production
     secrets: inherit
 
   deploy_to_cloud_run:
+    if: github.repository == 'dpgraham-com/dpgraham-client'
     name: Deploy to Cloud Run
     uses: ./.github/workflows/cloud-run-deploy.yaml
     needs: build_gcp_image

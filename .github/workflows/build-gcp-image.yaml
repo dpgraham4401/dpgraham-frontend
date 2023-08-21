@@ -14,7 +14,7 @@ on:
   workflow_call:
     inputs:
       environment:
-        description: 'The environment to deploy to'
+        description: 'The environment to deploy to ("production", "development")'
         required: true
         type: string
         default: 'production'
