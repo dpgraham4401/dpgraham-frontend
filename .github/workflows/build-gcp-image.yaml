@@ -62,7 +62,8 @@ jobs:
         id: auth
         with:
           workload_identity_provider: 'projects/1019596679104/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
-          service_account: 'terraform-dev@my-project.iam.gserviceaccount.com'
+          service_account: 'terraform-dev@dpgraham-com-dev.iam.gserviceaccount.com'
+          token_format: 'access_token'
 
       - name: Login to Google Artifact Registry
         uses: docker/login-action@v1
