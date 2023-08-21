@@ -1,16 +1,10 @@
-import axios from "axios";
-
-interface RequestOptions {
-  url: string;
-  method: string;
-  // headers: object;
-  data: object | null;
-}
+import axios, { AxiosRequestConfig } from "axios";
 
 function request(method: string) {
   const baseURL = `${import.meta.env.VITE_API_URL}`;
-  return (url: string, body: object | null) => {
-    const requestOptions: RequestOptions = {
+  console.log("baseURL: ", baseURL);
+  return async (url: string, body: object | null) => {
+    const requestOptions: AxiosRequestConfig = {
       url: `${baseURL}/${url}`,
       method,
       // headers: authHeader(`${baseURL}/${url}`),
@@ -19,10 +13,7 @@ function request(method: string) {
     if (body) {
       requestOptions.data = body;
     }
-    return axios(requestOptions).then((response) => {
-      // const { data } = response;
-      return response;
-    });
+    return axios(requestOptions);
   };
 }
 
