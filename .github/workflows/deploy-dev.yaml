@@ -12,6 +12,7 @@ jobs:
   build_gcp_image:
     permissions:
       id-token: write
+      contents: read
     #    if: github.repository == 'dpgraham-com/dpgraham-client'
     name: Build Image for Development
     uses: ./.github/workflows/build-gcp-image.yaml
