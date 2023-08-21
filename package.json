@@ -5,6 +5,7 @@
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
+    "build:staging": "tsc && vite build --mode staging",
     "serve": "serve dist",
     "test": "vitest --run",
     "test:watch": "vitest",

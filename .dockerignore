@@ -8,6 +8,6 @@ config/*
 node_modules/
 dpg-client/
 .github/
-.env
+.env.local
 **/*.bak
 **/*-key.json
