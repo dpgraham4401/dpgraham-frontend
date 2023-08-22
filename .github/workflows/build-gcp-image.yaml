@@ -1,12 +1,10 @@
 # This Workflow builds and pushes a Docker image to Google Artifact Registry
 
 # Prerequisites:
-# 1. Create service account
-#   1a. Service Account Token Creator
-# 2. Generate service account key
-#   2a. convert multiline key to single line with jq command (cat key.json | jq -r tostring)
-#   2b. create environment secret, Name: GOOGLE_CREDENTIALS, Value: key.json contents
-# 3. Make sure the Artifact repo has already been provisioned. Add to env:
+# 1. Create service account with the following roles:
+#   1a. Artifact Registry Writer (roles/artifactregistry.writer)
+# 2. Setup Workload Identity Federation Provider for the service account using GitHub's OIDC provider
+#   2a. https://youtu.be/ZgVhU5qvK1M  for a video overview on Workload Identity Federation Providers
 
 name: Docker build and push to Artifact Registry
 
@@ -61,7 +59,6 @@ jobs:
         uses: google-github-actions/auth@v1
         id: auth
         with:
-          # https://youtu.be/ZgVhU5qvK1M  for a video overview on Workload Identity Federation Providers
           workload_identity_provider: ${{ secrets.WIF_PROVIDER }}
           service_account: ${{ secrets.SA_EMAIL }}
           token_format: 'access_token'
