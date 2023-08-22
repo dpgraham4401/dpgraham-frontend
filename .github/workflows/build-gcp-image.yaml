@@ -61,7 +61,7 @@ jobs:
         uses: google-github-actions/auth@v1
         id: auth
         with:
-          workload_identity_provider: 'projects/1019596679104/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+          workload_identity_provider: 'projects/1019596679104/locations/global/workloadIdentityPools/github-action/providers/github'
           service_account: 'terraform-dev@dpgraham-com-dev.iam.gserviceaccount.com'
           token_format: 'access_token'
 
