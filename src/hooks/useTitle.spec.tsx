@@ -1,6 +1,6 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
-import { useTitle } from "components/hooks";
+import { useTitle } from "hooks/index";
 
 const originalPageTitle = "originalPageTitle";
 const newPageTitle = "newPageTitle";
@@ -14,7 +14,7 @@ function TestComponent({ prevailOnUnmount, excludeAppend }: TestCompProps) {
   const [pageTitle, setPageTitle] = useTitle(
     originalPageTitle,
     prevailOnUnmount,
-    excludeAppend
+    excludeAppend,
   );
   return (
     <>

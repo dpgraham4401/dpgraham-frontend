@@ -1,5 +1,5 @@
 import { CloudChallengeResume } from "components/CloudChallengeResume";
-import { useTitle } from "components/hooks";
+import { useTitle } from "hooks";
 import React from "react";
 
 /**

@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { useTitle } from "components/hooks";
+import { useTitle } from "hooks";
 import React from "react";
 
 export function AboutMe() {

@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { ArticlesOverview, MarkdownArticle } from "components/article";
-import { useTitle } from "components/hooks";
+import { useTitle } from "hooks";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
