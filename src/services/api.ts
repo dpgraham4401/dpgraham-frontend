@@ -1,12 +1,11 @@
 import axios, { AxiosRequestConfig } from "axios";
 
-function request(method: string) {
+function request(method: "GET" | "POST" | "PUT" | "DELETE") {
   const baseURL = `${import.meta.env.VITE_API_URL}`;
   return async (url: string, body: object | undefined) => {
     const requestOptions: AxiosRequestConfig = {
       url: `${baseURL}/${url}`,
       method,
-      // headers: authHeader(`${baseURL}/${url}`),
       data: null,
     };
     if (body) {
@@ -16,7 +15,6 @@ function request(method: string) {
   };
 }
 
-// eslint-disable-next-line import/prefer-default-export
 export const api = {
   get: request("GET"),
   post: request("POST"),
