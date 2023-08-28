@@ -1,5 +1,8 @@
+import { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 import { api } from "services/api";
+
+const cache = new Map<string, unknown>();
 
 export function useQuery<T>(url: string) {
   const [data, setData] = useState<T | undefined>(undefined);
@@ -8,12 +11,25 @@ export function useQuery<T>(url: string) {
 
   useEffect(() => {
     if (!url) return;
-    setLoading(true);
-    api
-      .get(url, null)
-      .then((response) => setData(response.data))
-      .then(() => setLoading(false))
-      .catch(setError);
+    // loading is initially true by default
+    if (cache.get(url)) {
+      console.debug(`cache hit: ${url}`);
+      setData(cache.get(url) as T);
+      setLoading(false);
+      return;
+    } else {
+      console.debug(`cache miss: ${url}`);
+      api
+        .get(url, undefined)
+        .then(
+          (response: AxiosResponse<T>) => (
+            setData(response.data), response.data
+          ),
+        )
+        .then((data) => cache.set(url, data))
+        .then(() => setLoading(false))
+        .catch(setError);
+    }
   }, [url]);
 
   return [data, loading, error] as const;
