@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig } from "axios";
 
 function request(method: string) {
   const baseURL = `${import.meta.env.VITE_API_URL}`;
-  return async (url: string, body: object | null) => {
+  return async (url: string, body: object | undefined) => {
     const requestOptions: AxiosRequestConfig = {
       url: `${baseURL}/${url}`,
       method,
