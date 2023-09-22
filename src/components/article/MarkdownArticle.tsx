@@ -1,6 +1,4 @@
-import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Card, CardContent, Container } from "@mui/material";
+import { Card, CardContent, CircularProgress, Container } from "@mui/material";
 import { DpgPageError } from "components/DpgError";
 import { DpgMarkdown } from "components/DpgMarkdown";
 import { Article } from "features/Articles";
@@ -23,10 +21,7 @@ export function MarkdownArticle() {
           <CardContent>
             {loading ? (
               <h1 className="d-flex justify-content-center bg-transparent py-3">
-                <FontAwesomeIcon
-                  className="fa-spin text-muted"
-                  icon={faCircleNotch}
-                />
+                <CircularProgress />
               </h1>
             ) : article ? (
               <DpgMarkdown article={article} />
