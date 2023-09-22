@@ -48,7 +48,10 @@ export function AboutMe() {
             component={"img"}
             sx={{ borderRadius: 1 }}
             alt="Selfie of me climbing in Protero Chico, Mexico"
-            src="https://dev.dpgraham.com/static/images/dg_protero_chico.JPG"
+            // src="https://dev.dpgraham.com/static/images/dg_protero_chico.JPG"
+            src={`${
+              import.meta.env.VITE_SITE_URL
+            }/static/images/dg_protero_chico.JPG`}
             style={{ width: "100%", maxWidth: 400 }}
           />
           <div>
