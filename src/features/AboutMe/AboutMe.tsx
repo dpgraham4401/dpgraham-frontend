@@ -192,6 +192,14 @@ export function AboutMe() {
                   </ListItem>
                 </Grid>
               </Grid>
+              <a
+                href="https://www.flaticon.com/free-icons/document"
+                title="document icons"
+              >
+                <Typography variant="caption">
+                  Document icons created by Freepik - Flaticon
+                </Typography>
+              </a>
             </CardContent>
           </Card>
         </Grid>
