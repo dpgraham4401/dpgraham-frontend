@@ -1,3 +1,5 @@
+import blogUrl from "/static/blog.png";
+import constructionUrl from "/static/construction.png";
 import recycleUrl from "/static/recycle-symbol.png";
 import {
   Box,
@@ -97,28 +99,6 @@ export function AboutMe() {
                 <Grid xs={6}>
                   <ListItem>
                     <ListItemButton
-                      href="https://grahamconstructionco.com"
-                      target="_blank"
-                      sx={{ borderRadius: 5 }}
-                    >
-                      <ListItemIcon>
-                        <img
-                          src={recycleUrl}
-                          alt="construction icon"
-                          height={35}
-                          width={35}
-                        />
-                      </ListItemIcon>
-                      <ListItemText
-                        primary={"Graham Construction Co."}
-                        secondary={
-                          "A static website for a Dallas local residential construction company"
-                        }
-                      />
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem>
-                    <ListItemButton
                       href="https://github.com/usepa/haztrak.git"
                       target="_blank"
                       sx={{ borderRadius: 5 }}
@@ -136,6 +116,52 @@ export function AboutMe() {
                         secondary={
                           "An open-source web application for tracking hazardous waste"
                         }
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </Grid>
+                <Grid xs={6}>
+                  <ListItem>
+                    <ListItemButton
+                      href="https://grahamconstructionco.com"
+                      target="_blank"
+                      sx={{ borderRadius: 5 }}
+                    >
+                      <ListItemIcon>
+                        <img
+                          src={constructionUrl}
+                          alt="construction icon"
+                          height={35}
+                          width={35}
+                        />
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={"Graham Construction Co."}
+                        secondary={
+                          "A static website for a Dallas local residential construction company (managed by me)"
+                        }
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </Grid>
+                <Grid xs={6}>
+                  <ListItem>
+                    <ListItemButton
+                      href="https://github.com/dpgraham-com"
+                      target="_blank"
+                      sx={{ borderRadius: 5 }}
+                    >
+                      <ListItemIcon>
+                        <img
+                          src={blogUrl}
+                          alt="Blog icon"
+                          height={35}
+                          width={35}
+                        />
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={"DPGraham.com"}
+                        secondary={"An overkill personal website"}
                       />
                     </ListItemButton>
                   </ListItem>
