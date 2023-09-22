@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from "axios";
 
 function request(method: "GET" | "POST" | "PUT" | "DELETE") {
-  const baseURL = `${import.meta.env.VITE_API_URL}`;
+  const baseURL = `${import.meta.env.VITE_SITE_URL}/api`;
   return async (url: string, body: object | undefined) => {
     const requestOptions: AxiosRequestConfig = {
       url: `${baseURL}/${url}`,

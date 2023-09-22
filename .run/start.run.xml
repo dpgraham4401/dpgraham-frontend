@@ -1,14 +1,14 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="start" type="js.build_tools.npm" nameIsGenerated="true">
-    <package-json value="$PROJECT_DIR$/package.json" />
-    <command value="run" />
-    <scripts>
-      <script value="start" />
-    </scripts>
-    <node-interpreter value="project" />
-    <envs>
-      <env name="VITE_API_URL" value="https://dev.dpgraham.com/api" />
-    </envs>
-    <method v="2" />
-  </configuration>
+    <configuration default="false" name="start" type="js.build_tools.npm" nameIsGenerated="true">
+        <package-json value="$PROJECT_DIR$/package.json"/>
+        <command value="run"/>
+        <scripts>
+            <script value="start"/>
+        </scripts>
+        <node-interpreter value="project"/>
+        <envs>
+            <env name="VITE_SITE_URL" value="https://dev.dpgraham.com/"/>
+        </envs>
+        <method v="2"/>
+    </configuration>
 </component>
