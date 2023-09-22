@@ -1,4 +1,15 @@
-import { Box, Divider, Typography } from "@mui/material";
+import recycleUrl from "/static/recycle-symbol.png";
+import {
+  Box,
+  Card,
+  CardContent,
+  Divider,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import { useTitle } from "hooks";
 import React from "react";
@@ -8,7 +19,7 @@ export function AboutMe() {
   return (
     <Box padding={4}>
       {/*Title section*/}
-      <Grid container>
+      <Grid container id="title-section" m={1}>
         <Grid xs={12}>
           <Typography variant="h3" textAlign="center">
             Not all who wonder all lost...
@@ -22,7 +33,13 @@ export function AboutMe() {
           <Divider />
         </Grid>
       </Grid>
-      <Grid container spacing={2} textAlign="center">
+      <Grid
+        container
+        spacing={2}
+        textAlign="center"
+        id="me-description-section"
+        m={1}
+      >
         <Grid xs={12} sm>
           <Box
             component={"img"}
@@ -59,6 +76,73 @@ export function AboutMe() {
             When I&apos;m not working, you can find me climbing, sailing,
             golfing, backpacking, woodworking, or fixing something I broke.
           </Typography>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        spacing={2}
+        textAlign="center"
+        m={1}
+        id="portfolio-section"
+      >
+        <Grid xs={12}>
+          <Typography variant="h4" textAlign="center">
+            Portfolio
+          </Typography>
+        </Grid>
+        <Grid xs={12} id="contact-section">
+          <Card>
+            <CardContent>
+              <Grid container>
+                <Grid xs={6}>
+                  <ListItem>
+                    <ListItemButton
+                      href="https://grahamconstructionco.com"
+                      target="_blank"
+                      sx={{ borderRadius: 5 }}
+                    >
+                      <ListItemIcon>
+                        <img
+                          src={recycleUrl}
+                          alt="construction icon"
+                          height={35}
+                          width={35}
+                        />
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={"Graham Construction Co."}
+                        secondary={
+                          "A static website for a Dallas local residential construction company"
+                        }
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem>
+                    <ListItemButton
+                      href="https://github.com/usepa/haztrak.git"
+                      target="_blank"
+                      sx={{ borderRadius: 5 }}
+                    >
+                      <ListItemIcon>
+                        <img
+                          src={recycleUrl}
+                          alt="recycle icon"
+                          height={35}
+                          width={35}
+                        />
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={"Haztrak"}
+                        secondary={
+                          "An open-source web application for tracking hazardous waste"
+                        }
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </Grid>
+              </Grid>
+            </CardContent>
+          </Card>
         </Grid>
       </Grid>
     </Box>
