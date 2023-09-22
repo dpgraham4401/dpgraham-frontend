@@ -1,5 +1,6 @@
 import blogUrl from "/static/blog.png";
 import constructionUrl from "/static/construction.png";
+import docUrl from "/static/file.png";
 import recycleUrl from "/static/recycle-symbol.png";
 import {
   Box,
@@ -162,6 +163,30 @@ export function AboutMe() {
                       <ListItemText
                         primary={"DPGraham.com"}
                         secondary={"An overkill personal website"}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </Grid>
+                <Grid xs={6}>
+                  <ListItem>
+                    <ListItemButton
+                      href="https://github.com/usepa/e-manifest"
+                      target="_blank"
+                      sx={{ borderRadius: 5 }}
+                    >
+                      <ListItemIcon>
+                        <img
+                          src={docUrl}
+                          alt="Blog icon"
+                          height={35}
+                          width={35}
+                        />
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={"e-Manifest Services Documentation"}
+                        secondary={
+                          "Deep dive on using the e-Manifest API to track hazardous waste electronically"
+                        }
                       />
                     </ListItemButton>
                   </ListItem>
