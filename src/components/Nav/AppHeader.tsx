@@ -42,7 +42,7 @@ export function AppHeader({
             style={{ backgroundColor: iconBG }}
           >
             <img
-              src="/rp_bg_trans.png"
+              src="https://dev.dpgraham.com/static/images/rp_bg_trans.png"
               width={"60"}
               height={"50"}
               alt="DPGraham"

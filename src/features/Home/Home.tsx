@@ -27,7 +27,7 @@ export function Home() {
               sx={{ marginTop: "200px", backgroundColor: "#1fafa8" }}
             >
               <img
-                src="/rp_bg_trans.png"
+                src="https://dev.dpgraham.com/static/images/rp_bg_trans.png"
                 width={"200"}
                 height={"175"}
                 alt="DPGraham"
