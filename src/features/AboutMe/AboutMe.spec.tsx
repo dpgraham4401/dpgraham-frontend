@@ -5,7 +5,7 @@ import React from "react";
 describe("About Me", () => {
   it("renders", () => {
     render(<AboutMe />);
-    const titleElement = screen.getByText(/coming soon/i);
+    const titleElement = screen.getByText(/Not all who wonder all lost.../i);
     expect(titleElement).toBeInTheDocument();
   });
 });
