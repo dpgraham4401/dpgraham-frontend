@@ -29,6 +29,7 @@ module.exports = {
   },
   rules: {
     "@typescript-eslint/no-shadow": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
     "import/no-unresolved": "off",
     "import/named": "off",
   },
