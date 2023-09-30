@@ -4,17 +4,17 @@ import { customTheme } from "components/customTheme";
 import { DpgPageError, FallbackError } from "components/DpgError";
 import { AppHeader } from "components/Nav";
 import { NavDrawer } from "components/Nav/NavDrawer";
-import { AboutMe } from "features/AboutMe";
-import { Articles } from "features/Articles";
-import { Home } from "features/Home";
-import { Resume } from "features/Resume/Resume";
+import AboutMe from "features/AboutMe";
+import Articles from "features/Articles";
+import Home from "features/Home";
+import Resume from "features/Resume";
 import React, { useMemo, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   const prefersDarkMode: boolean = useMediaQuery(
-    "(prefers-color-scheme: dark)"
+    "(prefers-color-scheme: dark)",
   );
   const [darkMode, setDarkMode] = useState<boolean>(prefersDarkMode);
 
