@@ -9,6 +9,37 @@ import { Container, Link } from "@mui/material";
 import React from "react";
 import styles from "./resume.module.css";
 
+const softSkills = [
+  "Public Speaking",
+  "Problem Analysis",
+  "Project Management",
+  "Customer Service",
+  "Conflict Resolution",
+];
+
+const hardSkills = [
+  "Devops",
+  "CI/CD",
+  "Linux",
+  "Containerization",
+  "Cloud Computing",
+  "Python",
+  "JavaScript/TypeScript",
+  "SQL",
+  "Go",
+  "Bash/shell scripting",
+  "Git",
+  "Docker",
+  "Kubernetes",
+  "Django",
+  "React.js",
+  "HTML/CSS",
+  "GitHub Actions",
+  "Terraform",
+  "Web Design",
+  "Technical/Policy Writing",
+];
+
 /**
  * This Resume is, primarily in HTML and css as part of the cloud resume challenge.
  * @constructor
@@ -26,9 +57,9 @@ export function CloudChallengeResume() {
           <div className={styles.summary}>
             {/* Summary ToDo: update*/}
             <span>
-              Full-stack developer versed in cloud infrastructure and proficient
-              at developing cost-effective solutions. Seeking a work environment
-              with diverse ideas and opportunities for continued growth.
+              Web developer with 3 years of experience using back end and
+              front-end technology, a year of experience managing cost-effective
+              cloud solutions, and a background in environmental science.
             </span>
           </div>
           {/* Contact info */}
@@ -99,7 +130,7 @@ export function CloudChallengeResume() {
               <div className={styles.sectionListItem}>
                 <div className={styles.left}>
                   <div className={styles.subSectionTitle}>
-                    Full-Stack Developer
+                    Full-Stack Developer and Environmental Policy Writer
                   </div>
                   <div className={styles.subSectionDescription}>
                     United States Environmental Protection Agency (EPA)
@@ -110,13 +141,9 @@ export function CloudChallengeResume() {
                 </div>
                 <ul className={styles.subSectionBullet}>
                   <li>
-                    Implemented new data analysis methods to group related
-                    hazardous waste sites and automated outreach to exceed
-                    hazardous waste generator registration targets.{" "}
-                  </li>
-                  <li>
-                    Interfaced with stakeholder to collect, triage, and analyze
-                    e-Manifest data-quality issues.
+                    Automated generator outreach through data analysis to group
+                    hazardous waste sites by company and notify them of orphaned
+                    sites to exceed annual registration targets by 350%.
                   </li>
                   <li>
                     Designed, developed, and published an open-source web
@@ -129,6 +156,13 @@ export function CloudChallengeResume() {
                     Published API client libraries (TypeScript and Python) and
                     expanded documentation and guidance for stakeholders seeking
                     to use e-Manifest.
+                  </li>
+                  <li>
+                    Promulgated national policies that established the legal
+                    framework for system users to meet their regulatory
+                    requirements; co-wrote the e-Manifest Third Rule which
+                    established requirements for reports to be submitted
+                    digitally.
                   </li>
                 </ul>
               </div>
@@ -280,32 +314,13 @@ export function CloudChallengeResume() {
               <div className={styles.left}>
                 <div className={styles.name}>Hard</div>
               </div>
-              <div className={styles.skillsRow}>
-                <div className={styles.skill}>Devops</div>
-                <div className={styles.skill}>CI/CD</div>
-                <div className={styles.skill}>Linux</div>
-                <div className={styles.skill}>Containerization</div>
-                <div className={styles.skill}>Cloud Infrastructure</div>
-              </div>
-            </div>
-            <div>
               <div className={styles.skillsSection}>
-                <div className={styles.left}>
-                  <div className={styles.name}>Tools and Languages</div>
-                </div>
                 <div className={styles.skillsRow}>
-                  <div className={styles.skill}>Python</div>
-                  <div className={styles.skill}>JavaScript/TypeScript</div>
-                  <div className={styles.skill}>SQL</div>
-                  <div className={styles.skill}>Go</div>
-                  <div className={styles.skill}>Bash/shell scripting</div>
-                  <div className={styles.skill}>Git</div>
-                  <div className={styles.skill}>Docker</div>
-                  <div className={styles.skill}>Kubernetes</div>
-                  <div className={styles.skill}>Django</div>
-                  <div className={styles.skill}>React.js</div>
-                  <div className={styles.skill}>GitHub Actions</div>
-                  <div className={styles.skill}>Terraform</div>
+                  {hardSkills.map((skill) => (
+                    <div key={`${skill}-skill`} className={styles.skill}>
+                      {skill}
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className={styles.skillsSection}>
@@ -313,11 +328,11 @@ export function CloudChallengeResume() {
                   <div className={styles.name}>Soft</div>
                 </div>
                 <div className={styles.skillsRow}>
-                  <div className={styles.skill}>Public Speaking</div>
-                  <div className={styles.skill}>Problem Analysis</div>
-                  <div className={styles.skill}>Project Management</div>
-                  <div className={styles.skill}>Customer Service</div>
-                  <div className={styles.skill}>Attention to Detail</div>
+                  {softSkills.map((skill) => (
+                    <div key={`${skill}-skill`} className={styles.skill}>
+                      {skill}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
