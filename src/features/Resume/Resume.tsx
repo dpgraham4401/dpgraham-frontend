@@ -18,7 +18,6 @@ const fabStyle = {
  * @constructor
  */
 export function Resume() {
-  // ToDo - Add a way to download PDF resume
   useTitle("Resume");
   return (
     <Box p={2}>

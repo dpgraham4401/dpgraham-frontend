@@ -16,7 +16,7 @@ jobs:
       contents: read
     uses: ./.github/workflows/build-gcp-image.yaml
     with:
-      environment: production
+      environment: 'production'
     secrets: inherit
 
   deploy_to_cloud_run:
@@ -28,12 +28,14 @@ jobs:
     uses: ./.github/workflows/cloud-run-deploy.yaml
     needs: build_gcp_image
     with:
-      environment: production
+      environment: 'production'
       version: ${{ needs.build_gcp_image.outputs.version }}
-      service: client
+      service: 'client'
     secrets: inherit
 
   build_ghcr_image:
     name: Build Image for GHCR
     uses: ./.github/workflows/build-ghcr-image.yaml
     secrets: inherit
+    with:
+      environment: 'production'

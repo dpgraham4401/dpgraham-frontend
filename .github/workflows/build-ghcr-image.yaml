@@ -4,6 +4,12 @@ name: 'Build Image for GitHub Container Registry'
 
 on:
   workflow_call:
+    inputs:
+      environment:
+        description: 'The environment to deploy to ("production", "development")'
+        required: true
+        type: string
+        default: 'production'
 
 jobs:
   build_docker_image:
@@ -12,6 +18,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Configure Dev image
+        if: ${{ inputs.environment == 'development' }}
+        run: |
+          cp config/.env.staging .env
+
+      - name: Configure Prod image
+        if: ${{ inputs.environment == 'production' }}
+        run: |
+          cp config/.env.production .env
 
       - name: Docker meta
         id: meta

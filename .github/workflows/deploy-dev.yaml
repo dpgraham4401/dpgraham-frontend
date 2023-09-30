@@ -19,7 +19,7 @@ jobs:
     name: Build Image for Development
     uses: ./.github/workflows/build-gcp-image.yaml
     with:
-      environment: development
+      environment: 'development'
     secrets: inherit
 
 
@@ -32,7 +32,7 @@ jobs:
     uses: ./.github/workflows/cloud-run-deploy.yaml
     needs: build_gcp_image
     with:
-      environment: development
+      environment: 'development'
       version: ${{ needs.build_gcp_image.outputs.version }}
-      service: client-dev
+      service: 'client-dev'
     secrets: inherit

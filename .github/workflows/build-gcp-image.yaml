@@ -41,6 +41,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Configure Dev image
+        if: ${{ inputs.environment == 'development' }}
+        run: |
+          cp config/.env.staging .env
+
+      - name: Configure Prod image
+        if: ${{ inputs.environment == 'production' }}
+        run: |
+          cp config/.env.production .env
+
       - name: Docker meta
         uses: docker/metadata-action@v4
         id: meta
