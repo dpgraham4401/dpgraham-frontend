@@ -1,4 +1,4 @@
-import { Article, Articles } from "./Articles";
+import { Article, Articles as Component } from "./Articles";
 
-export default Articles;
+export { Component };
 export type { Article };

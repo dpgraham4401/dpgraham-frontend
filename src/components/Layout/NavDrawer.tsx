@@ -8,7 +8,7 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import { routes } from "components/Nav/routes";
+import { routes } from "components/Layout/routes";
 import React, { Dispatch, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
 

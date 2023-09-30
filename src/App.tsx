@@ -2,14 +2,38 @@ import { CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
 import { AppContext } from "components/appContext";
 import { customTheme } from "components/customTheme";
 import { DpgPageError, FallbackError } from "components/DpgError";
-import { AppHeader } from "components/Nav";
-import { NavDrawer } from "components/Nav/NavDrawer";
-import AboutMe from "features/AboutMe";
-import Articles from "features/Articles";
-import Home from "features/Home";
-import Resume from "features/Resume";
+import { Root } from "components/Layout";
 import React, { useMemo, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      {
+        path: "",
+        lazy: () => import("./features/Home"),
+      },
+      {
+        path: "resume",
+        lazy: () => import("./features/Resume"),
+      },
+      {
+        path: "about",
+        lazy: () => import("./features/AboutMe"),
+      },
+      {
+        path: "about",
+        lazy: () => import("./features/Articles"),
+      },
+      {
+        path: "*",
+        element: <DpgPageError statusCode={404} message={"page not found"} />,
+      },
+    ],
+  },
+]);
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -22,32 +46,13 @@ function App() {
 
   return (
     <>
-      <AppContext.Provider value={{ showMenu, darkMode }}>
+      <AppContext.Provider
+        value={{ showMenu, setShowMenu, darkMode, setDarkMode }}
+      >
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <FallbackError>
-            <BrowserRouter>
-              <AppHeader
-                showMenu={showMenu}
-                setShowMenu={setShowMenu}
-                darkMode={darkMode}
-                setDarkMode={setDarkMode}
-              />
-              <NavDrawer setShowMenu={setShowMenu} showMenu={showMenu} />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/articles/*" element={<Articles />} />
-                <Route path="/about" element={<AboutMe />} />
-                <Route path="/resume" element={<Resume />} />
-                <Route
-                  path="*"
-                  element={
-                    <DpgPageError statusCode={404} message={"page not found"} />
-                  }
-                />
-              </Routes>
-              {/*</Box>*/}
-            </BrowserRouter>
+            <RouterProvider router={router} />
           </FallbackError>
         </ThemeProvider>
       </AppContext.Provider>

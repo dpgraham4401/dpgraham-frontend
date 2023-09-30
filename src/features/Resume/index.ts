@@ -1,3 +1,3 @@
-import { Resume } from "features/Resume/Resume";
+import { Resume as Component } from "features/Resume/Resume";
 
-export default Resume;
+export { Component };
