@@ -1,7 +1,7 @@
-import blogUrl from "/static/blog.png";
-import constructionUrl from "/static/construction.png";
-import docUrl from "/static/file.png";
-import recycleUrl from "/static/recycle-symbol.png";
+import blogUrl from "/assets/images/blog.png";
+import constructionUrl from "/assets/images/construction.png";
+import docUrl from "/assets/images/file.png";
+import recycleUrl from "/assets/images/recycle-symbol.png";
 import {
   Box,
   Card,
