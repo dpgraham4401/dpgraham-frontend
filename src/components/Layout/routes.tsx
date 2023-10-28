@@ -1,4 +1,4 @@
-import { Feed, Home, Person, WorkHistory } from "@mui/icons-material";
+import { Home, Person, WorkHistory } from "@mui/icons-material";
 import React, { ReactElement } from "react";
 
 interface Route {
@@ -15,13 +15,6 @@ export const routes: Route[] = [
     icon: <Home />,
     text: "Home",
     url: "/",
-  },
-  {
-    id: "articles",
-    icon: <Feed />,
-    text: "Articles",
-    url: "/articles",
-    description: "Ramblings for consumption",
   },
   {
     id: "about",
