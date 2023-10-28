@@ -18,25 +18,24 @@ const softSkills = [
 ];
 
 const hardSkills = [
-  "Devops",
-  "CI/CD",
-  "Linux",
-  "Containerization",
-  "Cloud Computing",
   "Python",
   "JavaScript/TypeScript",
+  "Git",
   "SQL",
+  "Docker",
+  "Linux",
+  "GitHub Actions",
   "Go",
   "Bash/shell scripting",
-  "Git",
-  "Docker",
   "Kubernetes",
   "Django",
   "React.js",
   "HTML/CSS",
-  "GitHub Actions",
   "Terraform",
-  "Web Design",
+  "Devops",
+  "CI/CD",
+  "Containerization",
+  "Cloud Computing",
   "Technical/Policy Writing",
 ];
 
@@ -57,9 +56,10 @@ export function CloudChallengeResume() {
           <div className={styles.summary}>
             {/* Summary ToDo: update*/}
             <span>
-              Web developer with 3 years of experience using back end and
-              front-end technology, a year of experience managing cost-effective
-              cloud solutions, and a background in environmental science.
+              Web developer with 4 years of experience using back end and
+              front-end technology, familiar with managing cost-effective cloud
+              solutions, and a background in Geophysics and environmental
+              science.
             </span>
           </div>
           {/* Contact info */}
@@ -141,26 +141,24 @@ export function CloudChallengeResume() {
                 </div>
                 <ul className={styles.subSectionBullet}>
                   <li>
-                    Automated generator outreach through data analysis to group
-                    hazardous waste sites by company and notify them of orphaned
-                    sites to exceed annual registration targets by 350%.
+                    Designed and an open-source web application called “Haztrak”
+                    to illustrate how hazardous waste handlers can use modern
+                    web development practices to electronically track waste.
                   </li>
                   <li>
-                    Designed, developed, and published an open-source web
-                    application using modern web technologies, such as Django
-                    and React, to track hazardous waste shipments with
-                    electronic manifests instead of the current paper intensive
-                    process.{" "}
+                    Open-sourced client libraries (TypeScript and Python) and
+                    expanded web service documentation to assist stakeholders
+                    struggling to parse multipart/mixed API responses.
                   </li>
                   <li>
-                    Published API client libraries (TypeScript and Python) and
-                    expanded documentation and guidance for stakeholders seeking
-                    to use e-Manifest.
+                    Acted as a liaison between EPA and trade associations to
+                    communicate changes in policy, technical requirement, and
+                    listen to concerns and issues.
                   </li>
                   <li>
                     Promulgated national policies that established the legal
-                    framework for system users to meet their regulatory
-                    requirements; co-wrote the e-Manifest Third Rule which
+                    framework for users to submit signatures through e-Manifest
+                    web services; co-authored the e-Manifest Third Rule which
                     established requirements for reports to be submitted
                     digitally.
                   </li>
@@ -257,13 +255,13 @@ export function CloudChallengeResume() {
               </div>
               <ul className={styles.subSectionBullet}>
                 <li>
-                  Streamlined daily safety inspections for the SMU climbing wall
-                  staff to allow management to understand equipment status at a
-                  glance.
+                  Streamlined daily safety inspections to allow staff to
+                  understand equipment status at a glance.
                 </li>
                 <li>
                   Supervised the implementation of an intercollegiate climbing
-                  competition with over 300 attendees and dozens of sponsors.
+                  competition with over 300 competitors and dozens of cooperate
+                  sponsors.
                 </li>
                 <li>
                   Undertook a year long training program to become an Outdoor
@@ -296,7 +294,7 @@ export function CloudChallengeResume() {
               <div className={styles.sectionListItem}>
                 <div className={styles.left}>
                   <div className={styles.subSectionTitle}>
-                    Bachelors of Science
+                    Bachelors of Science in Geophysics
                   </div>
                   <div className={styles.subSectionDescription}>
                     Southern Methodist university (SMU)
@@ -341,13 +339,13 @@ export function CloudChallengeResume() {
           <div className={styles.section}>
             <div className={styles.sectionTitle}>Certification and Courses</div>
             <div className={styles.compactListItem}>
-              Google Cloud Associate Cloud Engineer
+              CPR/AED and First Aid – American Trauma Event Management
             </div>
             <div className={styles.compactListItem}>
-              Microsoft GitHub Actions Workshop
+              GitHub Actions Workshop – Microsoft
             </div>
             <div className={styles.compactListItem}>
-              McCoy RCRA Hazardous Waste Training
+              RCRA Hazardous Waste Training – McCoy and Associates
             </div>
           </div>
           {/* Awards */}
@@ -359,10 +357,16 @@ export function CloudChallengeResume() {
                 <div className={styles.name}>
                   EPA Outstanding Performance Management
                 </div>
-                <div>EPA National Awards</div>
               </div>
               <div className={styles.right}>
                 <div className={styles.name}>2023</div>
+              </div>
+              <div>
+                <span>EPA National Awards - </span>
+                <span>
+                  For automating outreach to exceed user registration targets by
+                  350%.
+                </span>
               </div>
             </div>
             {/* ORCR 2022 */}
@@ -371,10 +375,18 @@ export function CloudChallengeResume() {
                 <div className={styles.name}>
                   Serving the Public with Integrity and a Strong Work Ethic
                 </div>
-                <div>Office of Resource Conservation and Recovery (ORCR)</div>
               </div>
               <div className={styles.right}>
                 <div className={styles.name}>2022</div>
+              </div>
+              <div>
+                <span>
+                  Office of Resource Conservation and Recovery (ORCR) -{" "}
+                </span>
+                <span>
+                  For going above and beyond to host public meetings to gather
+                  stakeholder input.
+                </span>
               </div>
             </div>
             {/* ORCR 2021 */}
@@ -383,20 +395,36 @@ export function CloudChallengeResume() {
                 <div className={styles.name}>
                   Serving the Public with Integrity and a Strong Work Ethic
                 </div>
-                <div>Office of Resource Conservation and Recovery (ORCR)</div>
               </div>
               <div className={styles.right}>
                 <div className={styles.name}>2021</div>
+              </div>
+              <div>
+                <span>
+                  Office of Resource Conservation and Recovery (ORCR) -{" "}
+                </span>
+                <span>
+                  For going above and beyond to host public meetings to gather
+                  stakeholder input.
+                </span>
               </div>
             </div>
             {/* ORCR 2020 */}
             <div className={styles.compactListItem}>
               <div className={styles.left}>
                 <div className={styles.name}>People as our Strength</div>
-                <div>Office of Resource Conservation and Recovery (ORCR)</div>
               </div>
               <div className={styles.right}>
                 <div className={styles.name}>2020</div>
+              </div>
+              <div>
+                <span>
+                  Office of Resource Conservation and Recovery (ORCR) -{" "}
+                </span>
+                <span>
+                  For quickly picking up new skills in the face of adverse
+                  conditions.
+                </span>
               </div>
             </div>
             {/* Eagle Scout */}
