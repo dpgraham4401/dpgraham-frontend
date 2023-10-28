@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import blogUrl from "/assets/images/blog.png";
 import constructionUrl from "/assets/images/construction.png";
 import docUrl from "/assets/images/file.png";
@@ -30,9 +31,6 @@ export function AboutMe() {
           <Typography variant="h4" textAlign="center" fontStyle="italic">
             But you&apos;re clearly in the wrong place
           </Typography>
-          <Typography variant="subtitle1" textAlign="center">
-            But while you&apos;re here, let me tell you a little about myself.
-          </Typography>
           <Divider />
         </Grid>
       </Grid>
@@ -43,46 +41,30 @@ export function AboutMe() {
         id="me-description-section"
         m={1}
       >
-        <Grid xs={12} sm>
-          <Box
-            component={"img"}
-            sx={{ borderRadius: 1 }}
-            alt="Selfie of me climbing in Protero Chico, Mexico"
-            // src="https://dev.dpgraham.com/static/images/dg_protero_chico.JPG"
-            src={`${
-              import.meta.env.VITE_SITE_URL
-            }/static/images/dg_protero_chico.JPG`}
-            style={{ width: "100%", maxWidth: 400 }}
-          />
-          <div>
-            <Typography fontStyle="italic" variant="caption">
-              A selfie of myself a half-way through{" "}
-              <a href="https://www.mountainproject.com/photo/119875709/starting-to-lead-p7-on-yankee-clipper-potrero-chico-oct-2020">
-                Yankee Clipper
-              </a>{" "}
-              in Portrero Chico, Mexico.
-            </Typography>
-          </div>
-        </Grid>
-        <Divider orientation="vertical" flexItem />
         <Grid xs={12} sm spacing={2} my={5}>
-          <Typography textAlign="justify" my={2} fontSize="larger">
-            Hi, I&apos;m David. I am a Washington, DC based web developer with
-            experience in cloud infrastructure, environmental policy and an
-            educational background in geophysics.
+          <Typography variant="h5" fontWeight="bold" textAlign="justify">
+            My name is David Graham.
           </Typography>
-          <Typography textAlign="justify" my={2} fontSize="larger">
-            I started working for the Environmental Protection Agency (EPA) in
-            2020 for the{" "}
-            <a href="https://epa.gov/e-manifest">e-Manifest Program</a> as part
-            of the policy team. However, I quickly started to apply my technical
-            skills to the program, and now do both policy and development work.
+          <Typography textAlign="justify" my={2} fontSize="x-large">
+            Hi, I&apos;m David. I am a web developer based in Washington, D.C.
+            with experience in cloud infrastructure, environmental policy and an
+            educational background in geophysics. If you would like to know
+            more, take a look at my <Link to="/resume">resume</Link>.
           </Typography>
-          <Typography textAlign="justify" my={2} fontSize="larger">
-            When I&apos;m not working, you can find me climbing, sailing,
+          <Typography textAlign="justify" my={2} fontSize="x-large">
+            Most of my work is open-source and publicly available on{" "}
+            <a href="https://github.com/dpgraham4401">GitHub</a>. You can follow
+            me on{" "}
+            <a href="https://www.linkedin.com/in/dpgraham4401/">LinkedIn</a> or{" "}
+            <a href="https://twitter.com/Dpgraham4401">Twitter</a> (although I
+            am not particular active).
+          </Typography>
+          <Typography textAlign="justify" my={2} fontSize="x-large">
+            Outside of work and programming, you can find me climbing, sailing,
             golfing, backpacking, woodworking, or fixing something I broke.
           </Typography>
         </Grid>
+        <Grid xs={4}></Grid>
       </Grid>
       <Grid
         container

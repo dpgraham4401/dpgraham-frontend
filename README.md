@@ -2,7 +2,8 @@
 
 ## Introduction
 
-Welcome to `dpgraham-client`, my personal website, blog, and a project I use to learn and experiment.
+Welcome to `dpgraham-client`, my personal website and a project I use for experimentation and learning.
+I used to include articles, such as blogs and tutorials, but I didn't have time to maintain them and update them.
 
 ## Installation and Setup
 
