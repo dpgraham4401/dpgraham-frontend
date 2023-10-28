@@ -2,19 +2,9 @@
 
 ## Introduction
 
-Welcome to the `dpgraham-client` repository, this repository contains a React single-page application (SPA)
-that serves as my personal blog and experimental website. This application accompanies
-the [`dpgraham-server`](https://github.com/dpgraham4401/dpgraham-server) repo.
+Welcome to `dpgraham-client`, my personal website, blog, and a project I use to learn and experiment.
 
-## Purpose
-
-If you're reading this, you probably think I'm crazy. I understand that using a single-page application is not
-the most economical way to create a personal blog, I have intentionally chosen this approach as an opportunity to
-explore and learn about various aspects of web
-development. By developing this project, I aim to gain hands-on experience with React, TypeScript, and other front end
-related technologies.
-
-## Installation
+## Installation and Setup
 
 To run the dpgraham-client application locally, follow the steps below:
 
@@ -30,26 +20,16 @@ To run the dpgraham-client application locally, follow the steps below:
     npm install
     ```
 
-3. Start the development server:
+3. configure the environment variables:
+
+    ```shell
+    cp ./config/.env.example .env
+    ```
+4. Start the development server:
 
     ```shell
     npm start
     ```
-
-## Contributing
-
-Contributions are welcome and greatly appreciated. If you wish to contribute to this project, please follow the
-guidelines below:
-
-1. Fork the repository on GitHub.
-2. Create a new branch with a descriptive name for your feature or bug fix.
-3. Commit your changes and push them to your forked repository.
-4. Submit a pull request, explaining the changes you have made and their purpose.
-5. Don't be a jerk.
-
-## License
-
-This project is licensed under the GPL-3.0 License - see the [LICENSE](/LICENSE) file for details.
 
 ## Contact
 
