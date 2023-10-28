@@ -24,10 +24,6 @@ const router = createBrowserRouter([
         lazy: () => import("./features/AboutMe"),
       },
       {
-        path: "about",
-        lazy: () => import("./features/Articles"),
-      },
-      {
         path: "*",
         element: <DpgPageError statusCode={404} message={"page not found"} />,
       },

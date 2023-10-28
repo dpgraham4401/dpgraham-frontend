@@ -7,6 +7,7 @@ import { useQuery } from "services";
 
 export function ArticlesOverview() {
   const [articles, loading, error] = useQuery<Article[]>("article");
+  console.log(articles);
 
   if (error) {
     return <DpgPageError statusCode={404} message={error.message} />;

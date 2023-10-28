@@ -1,21 +1,22 @@
 import { Card, CardContent, Container } from "@mui/material";
 import React from "react";
 
-interface Props {
+interface DpgPageErrorProps {
   statusCode?: number;
   message?: string;
 }
 
 // Component for displaying errors in a pretty bootstrap card
-export function DpgPageError(props: Props) {
+export function DpgPageError({ message, statusCode }: DpgPageErrorProps) {
   return (
-    <Container>
+    <Container sx={{ p: 3 }}>
       <Card>
-        <CardContent>
-          {props.message ? (
-            <p>{props.message}</p>
+        <CardContent sx={{ textAlign: "center" }}>
+          <h1>{statusCode}</h1>
+          {message ? (
+            <h2>{message}</h2>
           ) : (
-            <p>Sorry, we experienced an error</p>
+            <h3>Sorry, we experienced an error</h3>
           )}
         </CardContent>
       </Card>
