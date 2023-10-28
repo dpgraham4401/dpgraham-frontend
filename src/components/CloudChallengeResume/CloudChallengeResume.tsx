@@ -141,19 +141,19 @@ export function CloudChallengeResume() {
                 </div>
                 <ul className={styles.subSectionBullet}>
                   <li>
-                    Designed and an open-source web application called “Haztrak”
-                    to illustrate how hazardous waste handlers can use modern
-                    web development practices to electronically track waste.
+                    Designed an open-source web application to illustrate how
+                    hazardous waste handlers can use modern web development
+                    practices to electronically track waste.
                   </li>
                   <li>
-                    Open-sourced client libraries (TypeScript and Python) and
-                    expanded web service documentation to assist stakeholders
-                    struggling to parse multipart/mixed API responses.
+                    Published client libraries (TypeScript and Python) and
+                    expanded documentation to assist stakeholders submit paper
+                    manifests through the e-Manifest web services.
                   </li>
                   <li>
-                    Acted as a liaison between EPA and trade associations to
-                    communicate changes in policy, technical requirement, and
-                    listen to concerns and issues.
+                    Liaised between EPA and trade associations to communicate
+                    changes in policy, technical requirement, and listen to
+                    concerns and issues.
                   </li>
                   <li>
                     Promulgated national policies that established the legal
