@@ -1,6 +1,6 @@
 {
   "name": "dpgraham-client",
-  "version": "0.0.26",
+  "version": "0.2.2",
   "private": true,
   "scripts": {
     "start": "vite",
