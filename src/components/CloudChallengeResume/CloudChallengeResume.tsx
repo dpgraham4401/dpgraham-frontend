@@ -56,7 +56,7 @@ export function CloudChallengeResume() {
           <div className={styles.summary}>
             {/* Summary ToDo: update*/}
             <span>
-              Web developer with 4 years of experience using back end and
+              Web developer with 3 years of experience using back end and
               front-end technology, familiar with managing cost-effective cloud
               solutions, and a background in Geophysics and environmental
               science.
@@ -82,7 +82,7 @@ export function CloudChallengeResume() {
               {/* Phone */}
               <div className={styles.contactInfoItem}>
                 <Phone className={styles.contactInfoIcon} />
-                <span className={styles.contactInfoField}>214-263-4401</span>
+                <span className={styles.contactInfoField}>(214) 263-4401</span>
               </div>
               {/* Location */}
               <div className={styles.contactInfoItem}>
@@ -130,7 +130,7 @@ export function CloudChallengeResume() {
               <div className={styles.sectionListItem}>
                 <div className={styles.left}>
                   <div className={styles.subSectionTitle}>
-                    Full-Stack Developer and Environmental Policy Writer
+                    Full Stack Developer and e-Manifest Policy Author
                   </div>
                   <div className={styles.subSectionDescription}>
                     United States Environmental Protection Agency (EPA)
