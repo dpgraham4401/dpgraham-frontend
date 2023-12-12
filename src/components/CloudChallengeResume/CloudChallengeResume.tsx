@@ -156,11 +156,11 @@ export function CloudChallengeResume() {
                     concerns and issues.
                   </li>
                   <li>
-                    Promulgated national policies that established the legal
-                    framework for users to submit signatures through e-Manifest
-                    web services; co-authored the e-Manifest Third Rule which
-                    established requirements for reports to be submitted
-                    digitally.
+                    Promulgated national policies that established the framework
+                    for users to submit signatures through e-Manifest web
+                    services and effectively use electronic manifests in lieu of
+                    paper; co-authored the e-Manifest Third Rule which
+                    (pending).
                   </li>
                 </ul>
               </div>
